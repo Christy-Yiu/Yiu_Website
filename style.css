@@ -1,5 +1,16 @@
 * {
-    color: blue;
+    color: rebeccapurple;
     margin: 10px;
-    gont: 14px Tahoma;
+    font: 15px Tahoma;
+}
+
+button {   
+    color: red;
+    font: 20px Georgia;
+
+}
+button.subpage {   
+    color: black;
+    font: 30px Arial;
+
 }
