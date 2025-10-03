@@ -44,16 +44,7 @@ body {
 }
 
 .grid-item2 {
-    background-color: lightgray;
-    border:black 1px solid;
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 2;
-}
-
-.grid-item3 {
-    background-color: lightgray;
+    background-color: mediumaquamarine;
     border:black 1px solid;
     grid-column-start: 2;
     grid-column-end: 3;
@@ -61,8 +52,17 @@ body {
     grid-row-end: 2;
 }
 
+.grid-item3 {
+    color: white;
+    background-color: black;
+    border:grey 1px solid;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
 h1 {color: #333; }
 button {
-    border: 2px solid #AAA;
-    background-color: #555
+    border: 2px solid #555;
     };
