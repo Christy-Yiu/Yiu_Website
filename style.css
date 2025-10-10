@@ -175,6 +175,8 @@ nav p:first-child {
     font-size: 12px;
 }
 
+/* Quote image */
+
 .quote {
     padding: 0.5em;
     width: 40em;
@@ -185,7 +187,7 @@ nav p:first-child {
     font-weight: 300;
 }
 
-.quoteimg{
+.quoteimg {
     align-self: center;
     max-width: 75%;
     height: auto;
