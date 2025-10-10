@@ -1,5 +1,5 @@
  var title= document.querySelector("h1");
- title.innerHTML = "This is another title from js";
+ title.innerHTML = "Welcome to my Website!";
 
  var Button = document.querySelector("#amongus");
  var Button2 = document.querySelector("#About");

@@ -131,3 +131,46 @@ nav p:first-child {
     margin-right: auto;
 
 }
+
+/* scatter plot styles*/
+
+.scatter-text {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+
+    width: min(60em, 100%);
+    background-color: white;
+    padding: min(2em, 30%);
+}
+
+.axis text {
+    font-size: 10px;
+    font-weight: bold; /* Makes tick labels bold */
+}
+
+.label {
+    font-weight: bold; /* Ensures axis titles are bold */
+}
+
+.dot {
+    fill-opacity: 0.7;
+    stroke: #333;
+    stroke-width: 1px;
+    transition: fill-opacity 0.2s;
+}
+.dot:hover {
+    fill-opacity: 1.0;
+}
+.tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 8px;
+    background: #fff;
+    border: 1px solid #333;
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 0;
+    font-size: 12px;
+}
