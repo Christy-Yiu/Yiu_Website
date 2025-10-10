@@ -1,18 +1,65 @@
 * {
-    color: rebeccapurple;
+    color: darkslategrey;
     margin: 10px;
     font: 15px Tahoma;
 }
+/* header and nav bar */
+header, section{
+    margin: 2em auto;
+    width: min(75em, 100%);
+    background-color: white;
+    padding: min(2em, 15%);
+    border-radius: 4em;
+}
+
+.name{
+    font-size: 3.5em;
+    font: Georgia;
+    font-weight: 600;
+
+}
 
 button {   
-    color: red;
+    color: grey;
     font: 20px Georgia;
+    border-radius: 0.4em;
+    border-color: lightseagreen;
 
 }
 button.subpage {   
-    color: black;
+    color: darkgray;
     font: 30px Arial;
+    border-radius: 0.3em;
+    font-size: 1.5em;
+    background-color: white;
+    border-color: lightblue;
+    margin-top: 0.5em;
 
+}
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3em;
+}
+h1 {
+    font-size: 2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.intro_button{
+    display: inline-block;
+    text-decoration: none;
+    color:white;
+    background-color: darkslategray;
+    padding: .75em;
+    margin-top: 0em;
+    border-radius: 0.5em;
+    font-weight: 200;
+}
+
+.text_container{
+    flex: 0 1 40em;
 }
 
 .box {
@@ -66,3 +113,21 @@ h1 {color: #333; }
 button {
     border: 2px solid #555;
     };
+
+nav {
+    margin: 1em auto 1em auto;
+    width: min(1000px, 100%);
+    font-size: 1.5em;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 2em;
+}
+
+nav p:first-child {
+    margin-right: auto;
+
+}
