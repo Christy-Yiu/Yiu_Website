@@ -174,3 +174,19 @@ nav p:first-child {
     opacity: 0;
     font-size: 12px;
 }
+
+.quote {
+    padding: 0.5em;
+    width: 40em;
+    height: 20em;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+.quoteimg{
+    align-self: center;
+    max-width: 75%;
+    height: auto;
+}
