@@ -1,5 +1,5 @@
- var title= document.querySelector("h1");
- title.innerHTML = "Welcome to my Website!";
+// var title= document.querySelector("h1");
+ //title.innerHTML = "Welcome to my Website!";
 
  var Button = document.querySelector("#amongus");
  var Button2 = document.querySelector("#About");
@@ -26,13 +26,13 @@
     alert("A M O N G U S !");
  }
 
- function alertabout(){
-    alert("uh i am a student hi how are you");
- }
+ //function alertabout(){
+//    alert("uh i am a student hi how are you");
+ //}
 
- function alertCV(){
-    alert("I havent made my CV yet, come back later");
- }
+ //function alertCV(){
+    //alert("I havent made my CV yet, come back later");
+ //}
 
 
  function welcometowork1(){

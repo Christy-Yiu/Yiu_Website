@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet" />
+        <title>Christy Yiu</title>
+    </head>
+    <body>
+
+            <!-- <h1>Welcome</h1> -->
+        <header>
+            <nav id="nav">
+                <!-- Navigation bar -->
+                    <ul>
+                        <p class="name">Subpage</p>
+
+                        <a id="homepage" class="subpage" href="index.html">Home</a>
+                        <a id="About" class="subpage" href="#vis-scatterplot">About me</a>
+                        <button id="CV" class="subpage">CV</button>
+                    
+        
+                    </ul> 
+                </nav>
+                <!-- Photo + self intro -->
+
+        <div id="main" class="flex-container">
+            <!-- commentmh -->
+            <img src="me.png"/>
+            <div class="text_container">
+                <h1>What does my work include?</h1>
+                    <p>
+                    Most of my artworks are in digital form, such as Illustrations, emojis, 2D animations, celebration arts. I have also taken some personal commissions in my past experiences.
+                    </p>
+                    <a class="intro_button" href="https://www.instagram.com/0911_nozomi/"> Click to check my portfolio website</a>
+            </div>
+        </div>
+    </header>
+
+
+    <section id="vis-scatterplot" class="scatter-text">
+        My works over the years
+    </section>
+
+    <section id="vis-piechart" class="piechart-text">
+        Types of my digital artworks
+        <br>
+    </section>
+
+    <div id="tooltip-pie" class="tooltip-pie"></div>
+
+
+
+
+
+        <script src="code.js"></script>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="src/scatterplot.js"></script>
+        <script src="src/piechart.js"></script>
+    </body>
+</html>

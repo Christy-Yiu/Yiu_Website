@@ -1,4 +1,5 @@
 // scatterplot.js
+(function(){
         const creativeData = [
             { year: 2018, type: "Video Edits", count: 5 },
             { year: 2018, type: "Digital Art", count: 20 },
@@ -147,4 +148,6 @@
 
         // Handle responsiveness on window resize
         window.addEventListener('resize', drawScatterplot);
+    })();
 
+    //the (function(){ and })(); is to make the variables inside this file not affect other files
