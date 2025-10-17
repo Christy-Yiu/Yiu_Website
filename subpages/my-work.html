@@ -1,6 +1,7 @@
 <html>
     <head>
-        <link href="style.css" rel="stylesheet" />
+        <!-- ../ Redrirects to the primary folder-->
+        <link href="../style.css" rel="stylesheet" />
         <title>Christy Yiu</title>
     </head>
     <body>
@@ -12,7 +13,7 @@
                     <ul>
                         <p class="name">My works</p>
 
-                        <a id="homepage" class="subpage" href="index.html">Home</a>
+                        <a id="homepage" class="subpage" href="../index.html">Home</a>
                         <a id="About" class="subpage" href="#vis-scatterplot">About me</a>
                         <button id="CV" class="subpage">CV</button>
                     
@@ -23,7 +24,7 @@
 
         <div id="main" class="flex-container">
             <!-- commentmh -->
-            <img src="catbubble.png"/>
+            <img src="../images/catbubble.png"/>
             <div class="text_container">
                 <h1>What does my work include?</h1>
                     <p>
@@ -46,9 +47,11 @@
     </section>
 
     <div id="tooltip-pie" class="tooltip-pie"></div>
-        <script src="code.js"></script>
-        <script src="https://d3js.org/d3.v7.min.js"></script>
-        <script src="src/scatterplot.js"></script>
-        <script src="src/piechart.js"></script>
+
+
+    <script src="../code.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="../src/scatterplot.js"></script>
+    <script src="../src/piechart.js"></script>
     </body>
 </html>

@@ -5,9 +5,9 @@
  var Button2 = document.querySelector("#About");
  var Button3 = document.querySelector("#CV");
 
- Button.addEventListener("click", myfunction);
- Button2.addEventListener("click", alertabout);
- Button3.addEventListener("click", alertCV);
+// Button.addEventListener("click", myfunction);
+ //Button2.addEventListener("click", alertabout);
+ //Button3.addEventListener("click", alertCV);
 
 
  
