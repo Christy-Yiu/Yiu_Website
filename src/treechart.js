@@ -40,7 +40,7 @@
                         {
                             name: "Editing & Animation",
                             children: [
-                                { name: "Game-related videos (Genshin Impact, Minecraft, Call of Duty" },
+                                { name: "Game-related videos (Genshin Impact, Minecraft, Call of Duty)" },
                                 { name: "Music-related videos (find the light, letter)"},
                                 { name: "Software: Premiere Pro, Power Director 14(Legacy)" }
                             ]

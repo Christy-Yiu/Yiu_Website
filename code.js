@@ -30,9 +30,9 @@
 //    alert("uh i am a student hi how are you");
  //}
 
- //function alertCV(){
-    //alert("I havent made my CV yet, come back later");
- //}
+ function alertCV(){
+    alert("I havent made my CV yet, come back later");
+ }
 
 
  function welcometowork1(){
