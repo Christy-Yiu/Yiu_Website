@@ -18,8 +18,8 @@
  mynode.style.color = "Blue";
 
  //add event listener
- mynode.addEventListener("click", welcometowork1);
- document.querySelector("#work1").appendChild(mynode);
+ //mynode.addEventListener("click", welcometowork1);
+ //document.querySelector("#work1").appendChild(mynode);
 
 
  function myfunction(){

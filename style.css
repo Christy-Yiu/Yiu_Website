@@ -311,3 +311,107 @@ h1 {
             font-weight: bold;
             fill: #1a4d73;
         }
+
+/* Node links style*/
+        .nodelink-text{
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 20px;
+            font-weight: 300;
+        }
+        .nodelink-container {
+            width: 100%;
+            max-width: 800px; /* Max width for the container */
+            height: 600px; /* Fixed height for the graph area */
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+            position: relative; /* Needed for absolute positioning of tooltip */
+        }
+
+        /* Styling for the SVG elements */
+        .link {
+            stroke: #999;
+            stroke-opacity: 0.6;
+            stroke-width: 1.5px;
+        }
+
+        /* Renamed the selector for node circles */
+        .node-circle-element {
+            stroke: #fff;
+            stroke-width: 1.5px;
+            cursor: grab;
+        }
+        .node-circle-element:active {
+            cursor: grabbing;
+        }
+
+        /* Renamed the selector for node text */
+        .nodelink-node text { /* Updated from .node text */
+            font-size: 10px;
+            text-anchor: middle;
+            fill: #333;
+            pointer-events: none; /* Allows mouse events to pass through text to the circle */
+            text-shadow: 
+                -1px -1px 0 #fff,  
+                1px -1px 0 #fff,
+                -1px 1px 0 #fff,
+                1px 1px 0 #fff; /* Outline for readability */
+        }
+
+        /* Tooltip styles */
+        .tooltip-nodelink {
+            position: absolute;
+            text-align: center;
+            padding: 8px;
+            background: #fff;
+            border: 1px solid #333;
+            border-radius: 4px;
+            pointer-events: none; /* Tooltip itself should not block mouse events */
+            opacity: 0;
+            font-size: 12px;
+            z-index: 10; /* Ensure tooltip is on top */
+        }
+/* Matrix styles */
+.adj-text {
+    text-align: center;
+}
+        .diagram-container {
+            width: 100%;
+            max-width: 900px;
+            height: 900px;
+            margin: 20px auto;
+            background-color: #f9f9f9;
+        }
+
+        .adj-matrix-cell {
+            stroke: #bdbdbd;
+            stroke-width: 0.5px;
+        }
+
+        .adj-matrix-label {
+            font-size: 8px;
+            fill: #555;
+            text-anchor: middle;
+        }
+
+        .adj-matrix-label.row-label {
+            text-anchor: end;
+        }
+
+        .adj-matrix-label.col-label {
+            text-anchor: start;
+        }
+
+        .tooltip-adja-matrix {
+            position: absolute;
+            text-align: center;
+            padding: 8px;
+            background: #fff;
+            border: 1px solid #333;
+            border-radius: 4px;
+            pointer-events: none;
+            opacity: 0;
+            font-size: 12px;
+            z-index: 10;
+        }
