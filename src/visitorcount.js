@@ -3,7 +3,7 @@
         // How long a simulated visitor stays on the map (in milliseconds)
         const MAX_VISITOR_AGE_MS = 30 * 1000; // 30 seconds
         // How often a new simulated visitor is added (in milliseconds)
-        const ADD_VISITOR_INTERVAL_MS = 250; // Every 1 second
+        const ADD_VISITOR_INTERVAL_MS = 1000; // Every 1 second
         // How often the map and visitor dots are updated (in milliseconds)
         const MAP_UPDATE_INTERVAL_MS = 250; // Every 0.5 seconds
 
