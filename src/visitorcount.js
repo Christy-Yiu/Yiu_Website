@@ -3,7 +3,7 @@
     // How long a simulated visitor stays on the map (in milliseconds)
     const MAX_VISITOR_AGE_MS = 30 * 1000; // 30 seconds
     // How often a new simulated visitor is added (in milliseconds)
-    const ADD_VISITOR_INTERVAL_MS = 250; // Every 0.5 second
+    const ADD_VISITOR_INTERVAL_MS = 500; // Every 0.5 second
     // How often the map and visitor dots are updated (in milliseconds)
     const MAP_UPDATE_INTERVAL_MS = 500; // Every 0.5 seconds
     // Radius of each individual visitor dot in pixels
@@ -34,10 +34,11 @@
         // Example ranges for land areas (these are not exhaustive)
         const landAreas = [
             { lonRange: [-80, -20], latRange: [20, 50] }, // Eastern USA
-            { lonRange: [-30, 30], latRange: [0, 50] },  // Africa and parts of Europe
-            { lonRange: [30, 80], latRange: [20, 50] },  // Middle East and parts of Asia
+            { lonRange: [-30, 60], latRange: [-20, 50] },  // Africa and parts of Europe
+            { lonRange: [-10, 80], latRange: [20, 50] },  // Middle East and parts of Asia
             { lonRange: [80, 180], latRange: [20, 60] }, // Eastern Asia and parts of Russia
-            { lonRange: [-180, -80], latRange: [17, 71] } // Parts of South America and Antarctica
+            { lonRange: [-180, -80], latRange: [17, 71] }, // Parts of South America and Antarctica
+            { lonRange: [110.0, 180.0],latRange: [-55.0, -10.0]}
         ];
 
         // Select a random land area
