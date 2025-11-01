@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js)
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0QMK56DFTN"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -9,11 +9,12 @@
         gtag('js', new Date());
 
         gtag('config', 'G-0QMK56DFTN');
-    </script>
+    </script> -->
+    <script src="https://apis.google.com/js/api.js"></script>
+    <!-- <script src="src/gapiload.js"></script> -->
     <link href="style.css" rel="stylesheet" />
     <title>Christy Yiu</title>
 </head>
-<!-- Google tag (gtag.js) -->
 
 
 <body>
@@ -62,11 +63,13 @@
     </section>
     <div id="map-tooltip" class="dotmap-map-tooltip"></div>
 
-    <section id="vis-visitormap">
+    <section id="vis-visitormap" class="visitormap-map-container">
         Visitor Map
         <br>
-        Visitor count: <span id="visitor-count">0</span>
+        Current Visitors: <span id="visitor-count">0</span>
+
     </section>
+    <div id="visitormap-tooltip" class="visitormap-map-tooltip"></div>
 
     <section class="quote">
         Quote of the day:
