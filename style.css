@@ -7,8 +7,10 @@
 html {
     scroll-behavior: smooth;
 }
+
 /* header and nav bar */
-header, section{
+header,
+section {
     margin: 2em auto;
     width: min(75em, 100%);
     background-color: white;
@@ -16,21 +18,22 @@ header, section{
     border-radius: 4em;
 }
 
-.name{
+.name {
     font-size: 3.5em;
     font: Georgia;
     font-weight: 600;
 
 }
 
-button {   
+button {
     color: grey;
     font: 20px Georgia;
     border-radius: 0.4em;
     border-color: lightseagreen;
 
 }
-button.subpage {   
+
+button.subpage {
     color: darkgray;
     font: 30px Arial;
     border-radius: 0.3em;
@@ -41,7 +44,7 @@ button.subpage {
 
 }
 
-a.subpage {   
+a.subpage {
     color: darkgray;
     font: 30px Arial;
     border-radius: 0.3em;
@@ -51,6 +54,7 @@ a.subpage {
     margin-top: 0.5em;
 
 }
+
 .flex-container {
     display: flex;
     justify-content: center;
@@ -58,14 +62,16 @@ a.subpage {
     flex-wrap: wrap;
     gap: 3em;
 }
+
 h1 {
     font-size: 2em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.intro_button{
+
+.intro_button {
     display: inline-block;
     text-decoration: none;
-    color:white;
+    color: white;
     background-color: darkslategray;
     padding: .75em;
     margin-top: 0em;
@@ -73,7 +79,7 @@ h1 {
     font-weight: 200;
 }
 
-.text_container{
+.text_container {
     flex: 0 1 40em;
 }
 
@@ -81,7 +87,7 @@ h1 {
     display: flex;
 }
 
-.box div{
+.box div {
     border: solid 1px Salmon;
 }
 
@@ -98,7 +104,7 @@ body {
 
 .grid-item1 {
     background-color: lightgray;
-    border:salmon 3px solid;
+    border: salmon 3px solid;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -107,7 +113,7 @@ body {
 
 .grid-item2 {
     background-color: mediumaquamarine;
-    border:black 1px solid;
+    border: black 1px solid;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
@@ -117,17 +123,22 @@ body {
 .grid-item3 {
     color: white;
     background-color: black;
-    border:grey 1px solid;
+    border: grey 1px solid;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 2;
 }
 
-h1 {color: #333; }
+h1 {
+    color: #333;
+}
+
 button {
     border: 2px solid #555;
-    };
+}
+
+;
 
 nav {
     margin: 1em auto 1em auto;
@@ -162,11 +173,13 @@ nav p:first-child {
 
 .axis text {
     font-size: 10px;
-    font-weight: bold; /* Makes tick labels bold */
+    font-weight: bold;
+    /* Makes tick labels bold */
 }
 
 .label {
-    font-weight: bold; /* Ensures axis titles are bold */
+    font-weight: bold;
+    /* Ensures axis titles are bold */
 }
 
 .dot {
@@ -175,9 +188,11 @@ nav p:first-child {
     stroke-width: 1px;
     transition: fill-opacity 0.2s;
 }
+
 .dot:hover {
     fill-opacity: 1.0;
 }
+
 .tooltip {
     position: absolute;
     text-align: center;
@@ -206,32 +221,41 @@ body {
     font-family: Arial, sans-serif;
     margin: 20px;
 }
+
 h1 {
     margin-top: 0;
-    }
+}
+
 .chart-container {
-        max-width: 800px; /* Max size for the pie chart container */
-        margin: 20px auto;
-        border: 1px solid #ccc;
-        padding: 10px;
-        box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-        text-align: center;
-    }
-    .slice path {
-        stroke: white;
-        stroke-width: 1px;
-        transition: opacity 0.3s;
-        pointer-events: all; /* Ensure mouse events are captured */
-    }
-    .slice:hover path {
-            opacity: 0.8;
-    }
-    .slice text {
-        font-size: 12px;
-        font-weight: bold;
-        fill: #333;
-        pointer-events: all; /* Allows mouse events to pass through text to the path */
-    }
+    max-width: 800px;
+    /* Max size for the pie chart container */
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.slice path {
+    stroke: white;
+    stroke-width: 1px;
+    transition: opacity 0.3s;
+    pointer-events: all;
+    /* Ensure mouse events are captured */
+}
+
+.slice:hover path {
+    opacity: 0.8;
+}
+
+.slice text {
+    font-size: 12px;
+    font-weight: bold;
+    fill: #333;
+    pointer-events: all;
+    /* Allows mouse events to pass through text to the path */
+}
+
 .tooltip-pie {
     position: absolute;
     text-align: center;
@@ -240,13 +264,16 @@ h1 {
     border: 1px solid #333;
     border-radius: 4px;
     pointer-events: none;
-    opacity: 0; /* Start hidden */
+    opacity: 0;
+    /* Start hidden */
     font-size: 14px;
 }
-    .legend {
-        font-size: 12px;
-        margin: 5px;
-    }
+
+.legend {
+    font-size: 12px;
+    margin: 5px;
+}
+
 /* Quote image */
 
 .quote {
@@ -266,7 +293,7 @@ h1 {
 }
 
 /* tree diagram styles*/
-.tree-text{
+.tree-text {
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.5em;
@@ -276,142 +303,210 @@ h1 {
     background-color: white;
     padding: min(2em, 30%);
 }
-        .tree-container {
-            width: 100%;
-            overflow-x: auto; /* Allows scrolling if the chart is wider than the screen */
-            border: 1px solid #ddd;
-            margin: 20px 0;
-            padding: 5px;
-        }
 
-        /* Styling for the SVG elements */
-        .node circle {
-            fill: #999;
-            stroke: steelblue;
-            stroke-width: 3px;
-        }
+.tree-container {
+    width: 100%;
+    overflow-x: auto;
+    /* Allows scrolling if the chart is wider than the screen */
+    border: 1px solid #ddd;
+    margin: 20px 0;
+    padding: 5px;
+}
 
-        .node text {
-            font: 12px sans-serif;
-            fill: #333;
-        }
+/* Styling for the SVG elements */
+.node circle {
+    fill: #999;
+    stroke: steelblue;
+    stroke-width: 3px;
+}
 
-        .link {
-            fill: none;
-            stroke: #ccc;
-            stroke-width: 2px;
-        }
+.node text {
+    font: 12px sans-serif;
+    fill: #333;
+}
 
-        /* Specific styling for the root node */
-        .node--root circle {
-            fill: #3b76a6;
-            stroke: #1a4d73;
-        }
-        .node--root text {
-            font-weight: bold;
-            fill: #1a4d73;
-        }
+.link {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 2px;
+}
+
+/* Specific styling for the root node */
+.node--root circle {
+    fill: #3b76a6;
+    stroke: #1a4d73;
+}
+
+.node--root text {
+    font-weight: bold;
+    fill: #1a4d73;
+}
 
 /* Node links style*/
-        .nodelink-text{
-            text-align: center;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-size: 20px;
-            font-weight: 300;
-        }
-        .nodelink-container {
-            width: 100%;
-            max-width: 800px; /* Max width for the container */
-            height: 600px; /* Fixed height for the graph area */
-            margin: 20px auto;
-            border: 1px solid #ccc;
-            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-            position: relative; /* Needed for absolute positioning of tooltip */
-        }
+.nodelink-text {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+}
 
-        /* Styling for the SVG elements */
-        .link {
-            stroke: #999;
-            stroke-opacity: 0.6;
-            stroke-width: 1.5px;
-        }
+.nodelink-container {
+    width: 100%;
+    max-width: 800px;
+    /* Max width for the container */
+    height: 600px;
+    /* Fixed height for the graph area */
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    /* Needed for absolute positioning of tooltip */
+}
 
-        /* Renamed the selector for node circles */
-        .node-circle-element {
-            stroke: #fff;
-            stroke-width: 1.5px;
-            cursor: grab;
-        }
-        .node-circle-element:active {
-            cursor: grabbing;
-        }
+/* Styling for the SVG elements */
+.link {
+    stroke: #999;
+    stroke-opacity: 0.6;
+    stroke-width: 1.5px;
+}
 
-        /* Renamed the selector for node text */
-        .nodelink-node text { /* Updated from .node text */
-            font-size: 10px;
-            text-anchor: middle;
-            fill: #333;
-            pointer-events: none; /* Allows mouse events to pass through text to the circle */
-            text-shadow: 
-                -1px -1px 0 #fff,  
-                1px -1px 0 #fff,
-                -1px 1px 0 #fff,
-                1px 1px 0 #fff; /* Outline for readability */
-        }
+/* Renamed the selector for node circles */
+.node-circle-element {
+    stroke: #fff;
+    stroke-width: 1.5px;
+    cursor: grab;
+}
 
-        /* Tooltip styles */
-        .tooltip-nodelink {
-            position: absolute;
-            text-align: center;
-            padding: 8px;
-            background: #fff;
-            border: 1px solid #333;
-            border-radius: 4px;
-            pointer-events: none; /* Tooltip itself should not block mouse events */
-            opacity: 0;
-            font-size: 12px;
-            z-index: 10; /* Ensure tooltip is on top */
-        }
+.node-circle-element:active {
+    cursor: grabbing;
+}
+
+/* Renamed the selector for node text */
+.nodelink-node text {
+    /* Updated from .node text */
+    font-size: 10px;
+    text-anchor: middle;
+    fill: #333;
+    pointer-events: none;
+    /* Allows mouse events to pass through text to the circle */
+    text-shadow:
+        -1px -1px 0 #fff,
+        1px -1px 0 #fff,
+        -1px 1px 0 #fff,
+        1px 1px 0 #fff;
+    /* Outline for readability */
+}
+
+/* Tooltip styles */
+.tooltip-nodelink {
+    position: absolute;
+    text-align: center;
+    padding: 8px;
+    background: #fff;
+    border: 1px solid #333;
+    border-radius: 4px;
+    pointer-events: none;
+    /* Tooltip itself should not block mouse events */
+    opacity: 0;
+    font-size: 12px;
+    z-index: 10;
+    /* Ensure tooltip is on top */
+}
+
 /* Matrix styles */
 .adj-text {
     text-align: center;
 }
-        .diagram-container {
-            width: 100%;
-            max-width: 900px;
-            height: 900px;
-            margin: 20px auto;
-            background-color: #f9f9f9;
-        }
 
-        .adj-matrix-cell {
-            stroke: #bdbdbd;
-            stroke-width: 0.5px;
-        }
+.diagram-container {
+    width: 100%;
+    max-width: 900px;
+    height: 900px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+}
 
-        .adj-matrix-label {
-            font-size: 8px;
-            fill: #555;
-            text-anchor: middle;
-        }
+.adj-matrix-cell {
+    stroke: #bdbdbd;
+    stroke-width: 0.5px;
+}
 
-        .adj-matrix-label.row-label {
-            text-anchor: end;
-        }
+.adj-matrix-label {
+    font-size: 8px;
+    fill: #555;
+    text-anchor: middle;
+}
 
-        .adj-matrix-label.col-label {
-            text-anchor: start;
-        }
+.adj-matrix-label.row-label {
+    text-anchor: end;
+}
 
-        .tooltip-adja-matrix {
-            position: absolute;
-            text-align: center;
-            padding: 8px;
-            background: #fff;
-            border: 1px solid #333;
-            border-radius: 4px;
-            pointer-events: none;
-            opacity: 0;
-            font-size: 12px;
-            z-index: 10;
-        }
+.adj-matrix-label.col-label {
+    text-anchor: start;
+}
+
+.tooltip-adja-matrix {
+    position: absolute;
+    text-align: center;
+    padding: 8px;
+    background: #fff;
+    border: 1px solid #333;
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 0;
+    font-size: 12px;
+    z-index: 10;
+}
+
+/* Dot-map: places visited, styles */
+.dotmap-map-container {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+
+    width: 100%;
+    max-width: 960px;
+    /* Max width for the map */
+    height: 700px;
+    /* Fixed height for the map area */
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    position: relative;
+    /* For tooltip positioning */
+    overflow: hidden;
+    /* Hide overflow if map goes slightly outside */
+}
+
+.dotmap-country-boundary {
+    fill: #82b5cebb;
+    stroke: #384e5d;
+    stroke-width: 0.5px;
+}
+
+.dotmap-country-boundary:hover {
+    fill: #8ec6ff;
+}
+
+.dotmap-dot {
+    fill: steelblue;
+    /* Blue color for visited dots */
+    stroke: #fff;
+    stroke-width: 0.2px;
+    opacity: 0.8;
+}
+
+.dotmap-map-tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #333;
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 0;
+    font-size: 12px;
+    z-index: 100;
+}

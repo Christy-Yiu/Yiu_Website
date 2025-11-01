@@ -40,21 +40,21 @@
         </div>
     </header>
 
-
-    <section id="vis-scatterplot" class="scatter-text">
-        My works over the years
-    </section>
-
-    <section id="vis-piechart" class="piechart-text">
-        Types of my digital artworks
-        <br>
-    </section>
-
-    <div id="tooltip-pie" class="tooltip-pie"></div>
-
     <section id="vis-tree" class="tree-text">
         My skills
         <br>
+    </section>
+
+    <section id="vis-dotmap" class="dotmap-map-container">
+        Places I have travelled to
+        <br>
+    </section>
+    <div id="map-tooltip" class="dotmap-map-tooltip"></div>
+
+    <section id="vis-visitormap">
+        Visitor Map
+        <br>
+        Visitor count: <span id="visitor-count">0</span>
     </section>
 
     <section class="quote">
@@ -83,9 +83,11 @@
 
     <script src="code.js"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="src/scatterplot.js"></script>
-    <script src="src/piechart.js"></script>
+    <script src="https://unpkg.com/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
     <script src="src/treechart.js"></script>
+    <script src="src/dotmap.js"></script>
+    <script src="src/visitorcount.js"></script>
+
 </body>
 
 </html>
