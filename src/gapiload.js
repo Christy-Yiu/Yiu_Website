@@ -9,10 +9,10 @@ function authenticate() {
   });
 }
 
-function loadClient() {
-  gapi.client.setApiKey('AIzaSyCLm1mNHBnujNygF1mYCjrBIF2GwalvcQg');
-  gapi.client.load('https://analyticsdata.googleapis.com/$discovery/rest?version=v1').then(() => {
-    console.log('GAPI client loaded for API');
-    fetchAnalyticsData();
-  });
-}
+// function loadClient() {
+//   gapi.client.setApiKey('API_KEY_HERE');
+//   gapi.client.load('https://analyticsdata.googleapis.com/$discovery/rest?version=v1').then(() => {
+//     console.log('GAPI client loaded for API');
+//     fetchAnalyticsData();
+//   });
+// }
