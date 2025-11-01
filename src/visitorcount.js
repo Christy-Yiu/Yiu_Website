@@ -181,8 +181,8 @@
 
             // Append a new SVG element to the container
             svg = container.append("svg")
-                .attr("width", containerWidth - 100)
-                .attr("height", containerHeight - 125);
+                .attr("width", containerWidth - 120)
+                .attr("height", containerHeight - 150);
 
             // Initialize a Mercator projection, which is suitable for a flat world map
             projection = d3.geoMercator()
