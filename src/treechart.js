@@ -60,8 +60,8 @@
                         {
                             name: "P5.js / Processing.org",
                             children: [
-                                { name: "Learnt in: Media Computing Class" },
-                                { name: "Product: Interactive Music Video" }
+                                { name: "Interactive Music Video 'Infinity Heaven'" },
+                                { name: "Software: Processing.org" }
                             ]
                         }
                     ]
