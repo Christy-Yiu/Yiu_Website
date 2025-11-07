@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <!-- ../ Redrirects to the primary folder-->
+        <link href="../style.css" rel="stylesheet" />
+        <title>Christy Yiu</title>
+    </head>
+    <body>
+
+            <!-- <h1>Welcome</h1> -->
+        <header>
+            <nav id="nav">
+                <!-- Navigation bar -->
+                    <ul>
+                        <p class="name">Work Gallery</p>
+
+                        <a id="homepage" class="subpage" href="../index.html">Home</a>
+                        <a id="About" class="subpage" href="my-work.html">About me</a>
+                        <button id="CV" class="subpage">CV</button>
+                    
+        
+                    </ul> 
+                </nav>
+                <!-- Photo + self intro -->
+
+        <div id="main" class="flex-container">
+            <!-- commentmh -->
+            <img src="../images/cat-shake.gif" class="catshake"/>
+            <div class="text_container">
+                <h1>Work Gallery</h1>
+                    <p>
+                    My gallery includes... its WIP.
+                    </p>
+                    <p>My work page is still under construction, so feel free to check my portfolio website below!</p>
+                    <a class="intro_button" href="https://christyyiu911.wixsite.com/christy-portfolio"> Click to check my portfolio website</a>
+            </div>
+        </div>
+    </header>
+
+
+    <section id="vis-scatterplot" class="scatter-text">
+        My works over the years
+    </section>
+
+    <section id="vis-piechart" class="piechart-text">
+        Types of my digital artworks
+        <br>
+    </section>
+
+    <section id="vis-nodelink" class="nodelink-text">
+        Artworks related to my courses
+    </section>
+
+    <section id="vis-adja-matrix" class="diagram-container adj-matrix-container">
+        <h1 class="adj-text">Diagram of Course-related Artworks</h1>
+    </section>
+    <div id="tooltip-adja-matrix" class="tooltip-adja-matrix"></div>
+
+    <div id="tooltip-nodelink" class="tooltip-nodelink"></div>
+    <div id="tooltip-pie" class="tooltip-pie"></div>
+
+
+    <script src="../code.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="../src/scatterplot.js"></script>
+    <script src="../src/piechart.js"></script>
+    <script src="../src/nodelink.js"></script>
+    <script src="../src/adja_matrix.js"></script>
+    </body>
+</html>

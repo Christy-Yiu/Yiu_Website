@@ -60,7 +60,7 @@
                         {
                             name: "P5.js / Processing.org",
                             children: [
-                                { name: "Interactive Music Video 'Infinity Heaven'" },
+                                { name: "Interactive Music Video Infinity Heaven'" },
                                 { name: "Software: Processing.org" }
                             ]
                         }

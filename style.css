@@ -206,15 +206,27 @@ nav p:first-child {
 }
 
 /* pie chart styles*/
+
+#vis-piechart {
+    position: relative;
+    /* Needed for absolute positioning of back button */
+    margin: 20px auto;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    /* Use flexbox to center the SVG if needed */
+    justify-content: center;
+    align-items: center;
+    width: min(60em, 100%);
+    background-color: white;
+    padding: min(2em, 30%);
+}
+
 .piechart-text {
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.5em;
     font-weight: 300;
-
-    width: min(60em, 100%);
-    background-color: white;
-    padding: min(2em, 30%);
 }
 
 body {
@@ -293,17 +305,6 @@ h1 {
 }
 
 /* tree diagram styles*/
-.tree-text {
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.5em;
-    font-weight: 300;
-
-    width: min(60em, 100%);
-    background-color: white;
-    padding: min(2em, 30%);
-}
-
 .tree-container {
     width: 100%;
     overflow-x: auto;
@@ -330,14 +331,13 @@ h1 {
     stroke: #ccc;
     stroke-width: 2px;
 }
-
 /* Specific styling for the root node */
-.node--root circle {
+.node-root circle {
     fill: #3b76a6;
     stroke: #1a4d73;
 }
 
-.node--root text {
+.node-root text {
     font-weight: bold;
     fill: #1a4d73;
 }
@@ -359,23 +359,19 @@ h1 {
     margin: 20px auto;
     border: 1px solid #ccc;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    position: relative;
+    position: right;
     /* Needed for absolute positioning of tooltip */
 }
 
 /* Styling for the SVG elements */
 .link {
-    stroke: #999;
+    stroke: #7e7e7e;
     stroke-opacity: 0.6;
     stroke-width: 1.5px;
 }
 
 /* Renamed the selector for node circles */
-.node-circle-element {
-    stroke: #fff;
-    stroke-width: 1.5px;
-    cursor: grab;
-}
+
 
 .node-circle-element:active {
     cursor: grabbing;
@@ -411,6 +407,89 @@ h1 {
     font-size: 12px;
     z-index: 10;
     /* Ensure tooltip is on top */
+}
+
+#nodelink-description-panel {
+    width: 350px; /* Fixed width for the panel */
+    padding: 20px;
+    border-left: 1px solid #eee;
+    background-color: #f9f9f9;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.05);
+    box-sizing: border-box;
+    max-height: 100%; /* Ensure it doesn't overflow container height */
+    overflow-y: auto; /* Scroll if content is too long */
+    flex-shrink: 0; /* Prevent panel from shrinking */
+    position: left; /* Maintain positioning context for elements inside */
+}
+
+#nodelink-back-button {
+    position: relative; /* Adjusted positioning */
+    margin-bottom: 10px; /* Add some space below the button */
+    padding: 8px 15px;
+    background-color: #e0e0e0;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    z-index: 10; /* Ensure it appears above other elements */
+    transition: background-color 0.2s ease;
+}
+
+#nodelink-description-panel h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.2em;
+}
+
+#nodelink-description-panel p {
+    font-size: 0.9em;
+    line-height: 1.5;
+    color: #555;
+}
+
+.nodelink-hidden {
+    display: none !important;
+}
+
+
+
+#nodelink-back-button:hover {
+    background-color: #d0d0d0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #vis-nodelink {
+        flex-direction: column;
+        /* Stack SVG and panel vertically */
+        height: auto;
+        /* Allow height to adjust */
+        max-width: 100%;
+    }
+
+    #vis-nodelink svg {
+        width: 100% !important;
+        /* SVG takes full width */
+        height: 500px;
+        /* Fixed height for SVG on small screens */
+    }
+
+    #nodelink-description-panel {
+        width: 100%;
+        /* Panel takes full width */
+        border-left: none;
+        border-top: 1px solid #eee;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    #nodelink-back-button {
+        position: static;
+        /* Position normally within flow */
+        margin-bottom: 15px;
+        width: calc(100% - 20px);
+        /* Adjust width */
+    }
 }
 
 /* Matrix styles */
@@ -563,4 +642,9 @@ h1 {
     font-size: 12px;
     z-index: 100;
     /* Ensure tooltip is above other elements */
+}
+
+/* Cat size */
+.catshake {
+    image-resolution: 75%;
 }

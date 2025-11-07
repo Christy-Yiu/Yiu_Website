@@ -1,37 +1,41 @@
 <html>
-    <head>
-        <!-- ../ Redrirects to the primary folder-->
-        <link href="../style.css" rel="stylesheet" />
-        <title>Christy Yiu</title>
-    </head>
-    <body>
 
-            <!-- <h1>Welcome</h1> -->
-        <header>
-            <nav id="nav">
-                <!-- Navigation bar -->
-                    <ul>
-                        <p class="name">About me</p>
+<head>
+    <!-- ../ Redrirects to the primary folder-->
+    <link href="../style.css" rel="stylesheet" />
+    <title>Christy Yiu</title>
+</head>
 
-                        <a id="homepage" class="subpage" href="../index.html">Home</a>
-                        <a id="About" class="subpage" href="#vis-scatterplot">About me</a>
-                        <button id="CV" class="subpage">CV</button>
-                    
-        
-                    </ul> 
-                </nav>
-                <!-- Photo + self intro -->
+<body>
+
+    <!-- <h1>Welcome</h1> -->
+    <header>
+        <nav id="nav">
+            <!-- Navigation bar -->
+            <ul>
+                <p class="name">About me</p>
+
+                <a id="homepage" class="subpage" href="../index.html">Home</a>
+                <a id="Work Gallery" class="subpage" href="gallery.html">About me</a>
+                <button id="CV" class="subpage">CV</button>
+
+
+            </ul>
+        </nav>
+        <!-- Photo + self intro -->
 
         <div id="main" class="flex-container">
             <!-- commentmh -->
-            <img src="../images/catbubble.png"/>
+            <img src="../images/catbubble.png" />
             <div class="text_container">
                 <h1>What does my work include?</h1>
-                    <p>
-                    Most of my artworks are in digital form, such as Illustrations, emojis, 2D animations, celebration arts. I have also taken some personal commissions in my past experiences.
-                    </p>
-                    <p>My work page is still under construction, so feel free to check my portfolio website below!</p>
-                    <a class="intro_button" href="https://christyyiu911.wixsite.com/christy-portfolio"> Click to check my portfolio website</a>
+                <p>
+                    Most of my artworks are in digital form, such as Illustrations, emojis, 2D animations, celebration
+                    arts. I have also taken some personal commissions in my past experiences.
+                </p>
+                <p>My work page is still under construction, so feel free to check my portfolio website below!</p>
+                <a class="intro_button" href="https://christyyiu911.wixsite.com/christy-portfolio"> Click to check my
+                    portfolio website</a>
             </div>
         </div>
     </header>
@@ -41,13 +45,20 @@
         My works over the years
     </section>
 
-    <section id="vis-piechart" class="piechart-text">
-        Types of my digital artworks
-        <br>
+    <section id="vis-piechart">
+        <div class="piechart-text"> Types of my digital artworks
+            <p>Click on the pie sections for the subtypes</p>
+        </div>
     </section>
 
     <section id="vis-nodelink" class="nodelink-text">
         Artworks related to my courses
+        <div id="nodelink-description-panel" class="nodelink-hidden">
+            <button id="nodelink-back-button" class="nodelink-hidden">← Back to All</button>
+            <h3 id="nodelink-panel-title"></h3>
+            <p id="nodelink-panel-content"></p>
+        </div>
+            <div id="tooltip-nodelink" class="tooltip-nodelink"></div>
     </section>
 
     <section id="vis-adja-matrix" class="diagram-container adj-matrix-container">
@@ -65,5 +76,6 @@
     <script src="../src/piechart.js"></script>
     <script src="../src/nodelink.js"></script>
     <script src="../src/adja_matrix.js"></script>
-    </body>
+</body>
+
 </html>
