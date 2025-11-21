@@ -4,13 +4,16 @@
     font: 15px Tahoma;
 }
 
-html {
+html,
+body {
     scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
 }
 
 /* header and nav bar */
-header,
-section {
+
+header, section {
     margin: 2em auto;
     width: min(75em, 100%);
     background-color: white;
@@ -19,7 +22,7 @@ section {
 }
 
 .name {
-    font-size: 3.5em;
+    font-size: 2em;
     font: Georgia;
     font-weight: 600;
 
@@ -40,7 +43,6 @@ button.subpage {
     font-size: 1.5em;
     background-color: white;
     border-color: lightblue;
-    margin-top: 0.5em;
 
 }
 
@@ -60,7 +62,7 @@ a.subpage {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 3em;
+    gap: em;
 }
 
 h1 {
@@ -68,13 +70,14 @@ h1 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.intro_button {
-    display: inline-block;
+a.intro_button {
+    align-items: center;
+    text-align: center;
+    display: flex;
     text-decoration: none;
     color: white;
     background-color: darkslategray;
     padding: .75em;
-    margin-top: 0em;
     border-radius: 0.5em;
     font-weight: 200;
 }
@@ -83,51 +86,34 @@ h1 {
     flex: 0 1 40em;
 }
 
-.box {
-    display: flex;
-}
-
-.box div {
-    border: solid 1px Salmon;
-}
-
 body {
     background-color: #e6eeff;
 }
-
-.grid-container {
-    display: grid;
-    grid-template-rows: 100px 100px;
-    grid-template-columns: 100px 100px 100px;
-    grid-gap: 1px;
+/* Footer */
+footer {
+    background-color: #4A90E2; /* Grey-blue background */
+    color: white; /* White text */
+    padding: 20px; /* Space inside the footer */
+    text-align: center; /* Centered text */
+    position: relative; /* Relative positioning */
+    bottom: 0; /* Align to the bottom */
+    width: 100%; /* Full width */
 }
 
-.grid-item1 {
-    background-color: lightgray;
-    border: salmon 3px solid;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 3;
+/* Optional: style for links */
+footer a {
+    color: white; /* White links */
+    text-decoration: none; /* No underlines on links */
 }
 
-.grid-item2 {
-    background-color: mediumaquamarine;
-    border: black 1px solid;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
+footer a:hover {
+    text-decoration: underline; /* Underline on hover for links */
 }
 
-.grid-item3 {
-    color: white;
-    background-color: black;
-    border: grey 1px solid;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 2;
+/* quick links */
+h1.quick {
+    text-align: center;
+    margin-bottom: 2em;
 }
 
 h1 {
@@ -138,7 +124,196 @@ button {
     border: 2px solid #555;
 }
 
-;
+#quicklink {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    /* Space between buttons */
+    justify-content: center;
+    padding: 20px;
+    max-width: 1200px;
+    /* Max width for the section */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* Styles for individual quicklink buttons */
+.quicklink-button {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    position: relative;
+    width: 300px;
+    /* Default width for buttons */
+    height: 200px;
+    /* Default height */
+    overflow: hidden;
+    /* Ensures content stays within bounds */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    cursor: pointer;
+    /* Indicate interactivity */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-color: #ffffff;
+    /* Fallback background for button */
+    display: flex;
+    /* Use flex to center content in case of issues */
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Hover effect for the button container */
+.quicklink-button:hover {
+    transform: translateY(-8px);
+    /* Lift effect */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    /* Enhanced shadow */
+}
+
+/* Styles for the embedded image */
+.quicklink-button img {
+    width: 100%;
+    height: 100%;
+    /* Image fills the button area */
+    object-fit: cover;
+    /* Covers the area without distortion */
+    display: block;
+    /* Removes extra space below image */
+    position: absolute;
+    /* Position absolutely to allow overlay */
+    top: -10;
+    left: -10;
+    z-index: 1;
+    /* Ensure image is below overlay but above bottom bar */
+}
+
+/* Styles for the solid blue bar at the bottom */
+.quicklink-button .bottom-bar {
+    position: absolute;
+    bottom: -10;
+    left: -10;
+    width: 100%;
+    height: 55px;
+    /* Height of the blue bar */
+    background-color: #2d4a66;
+    /* Solid blue color */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    box-sizing: border-box;
+    /* Include padding in width/height */
+    font-weight: 600;
+    /* Bold text */
+    text-align: center;
+    z-index: 2;
+    /* Ensure bar is above image */
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Darker blue on hover for the bottom bar */
+.quicklink-button:hover .bottom-bar {
+    background-color: #2d4a66;
+}
+
+.quicklink-button .bottom-bar p {
+    margin: 0;
+    /* Remove default paragraph margin */
+    font-size: 1.1em;
+    white-space: nowrap;
+    /* Prevent text wrapping */
+    overflow: hidden;
+    /* Hide overflowed text */
+    text-overflow: ellipsis;
+    /* Add ellipsis for overflowed text */
+    max-width: 100%;
+    /* Ensure ellipsis works */
+}
+
+/* Styles for the hover overlay */
+.quicklink-button .hover-overlay {
+    position: absolute;
+    top: -10;
+    left: -10;
+    width: 100%;
+    height: 100%;
+    background-color: #2d4a66;
+    /* Half transparent blue */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    box-sizing: border-box;
+    text-align: center;
+    opacity: 0;
+    /* Initially hidden */
+    visibility: hidden;
+    /* Initially hidden for accessibility and layout */
+    transition: opacity 0.3s ease-in-out;
+    /* Smooth fade effect */
+    pointer-events: none;
+    /* Allows mouse events to pass through when hidden */
+    z-index: 3;
+    /* Ensure overlay is on top */
+}
+
+.quicklink-button .hover-overlay p {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.5;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    /* Slight text shadow for readability */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 992px) {
+    .quicklink-button {
+        width: calc(50% - 25px);
+        /* Two columns on medium screens */
+        height: 180px;
+    }
+
+    #quicklink {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .quicklink-button {
+        width: 100%;
+        /* Single column on small screens */
+        height: 160px;
+    }
+
+    #quicklink {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .quicklink-button .bottom-bar {
+        height: 50px;
+        padding: 0 10px;
+    }
+
+    .quicklink-button .bottom-bar p {
+        font-size: 1em;
+    }
+
+    .quicklink-button .hover-overlay {
+        padding: 20px;
+    }
+
+    .quicklink-button .hover-overlay p {
+        font-size: 0.9em;
+    }
+}
+
 
 nav {
     margin: 1em auto 1em auto;
@@ -286,24 +461,6 @@ h1 {
     margin: 5px;
 }
 
-/* Quote image */
-
-.quote {
-    padding: 0.5em;
-    width: 40em;
-    height: 20em;
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.5em;
-    font-weight: 300;
-}
-
-.quoteimg {
-    align-self: center;
-    max-width: 75%;
-    height: auto;
-}
-
 /* tree diagram styles*/
 .tree-container {
     width: 100%;
@@ -331,6 +488,7 @@ h1 {
     stroke: #ccc;
     stroke-width: 2px;
 }
+
 /* Specific styling for the root node */
 .node-root circle {
     fill: #3b76a6;
@@ -410,21 +568,28 @@ h1 {
 }
 
 #nodelink-description-panel {
-    width: 350px; /* Fixed width for the panel */
+    width: 350px;
+    /* Fixed width for the panel */
     padding: 20px;
     border-left: 1px solid #eee;
     background-color: #f9f9f9;
-    box-shadow: -2px 0 5px rgba(0,0,0,0.05);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.05);
     box-sizing: border-box;
-    max-height: 100%; /* Ensure it doesn't overflow container height */
-    overflow-y: auto; /* Scroll if content is too long */
-    flex-shrink: 0; /* Prevent panel from shrinking */
-    position: left; /* Maintain positioning context for elements inside */
+    max-height: 100%;
+    /* Ensure it doesn't overflow container height */
+    overflow-y: auto;
+    /* Scroll if content is too long */
+    flex-shrink: 0;
+    /* Prevent panel from shrinking */
+    position: left;
+    /* Maintain positioning context for elements inside */
 }
 
 #nodelink-back-button {
-    position: relative; /* Adjusted positioning */
-    margin-bottom: 10px; /* Add some space below the button */
+    position: relative;
+    /* Adjusted positioning */
+    margin-bottom: 10px;
+    /* Add some space below the button */
     padding: 8px 15px;
     background-color: #e0e0e0;
     border: 1px solid #bbb;
@@ -432,7 +597,8 @@ h1 {
     cursor: pointer;
     font-size: 14px;
     color: #333;
-    z-index: 10; /* Ensure it appears above other elements */
+    z-index: 10;
+    /* Ensure it appears above other elements */
     transition: background-color 0.2s ease;
 }
 
@@ -550,8 +716,6 @@ h1 {
     height: 700px;
     /* Fixed height for the map area */
     margin: 20px auto;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     position: relative;
     /* For tooltip positioning */
@@ -645,6 +809,7 @@ h1 {
 }
 
 /* Cat size */
-.catshake {
-    image-resolution: 75%;
+img.catshake {
+    width: 300px;
+    height: auto;
 }
