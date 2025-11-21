@@ -9,6 +9,7 @@ body {
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
+    max-width: 100%;
 }
 
 /* header and nav bar */
@@ -91,7 +92,7 @@ body {
 }
 /* Footer */
 footer {
-    background-color: #4A90E2; /* Grey-blue background */
+    background-color: #1a3a4d; /* Grey-blue background */
     color: white; /* White text */
     padding: 20px; /* Space inside the footer */
     text-align: center; /* Centered text */
@@ -131,10 +132,9 @@ button {
     /* Space between buttons */
     justify-content: center;
     padding: 20px;
-    max-width: 1200px;
+    max-width: 100em;
     /* Max width for the section */
     width: 100%;
-    box-sizing: border-box;
 }
 
 
