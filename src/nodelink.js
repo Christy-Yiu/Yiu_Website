@@ -86,8 +86,8 @@ const nodeDescriptions = {
 
     function drawNodeLinkDiagram() {
         const container = d3.select("#vis-nodelink");
-        const containerWidth = container.node().clientWidth;
-        const svgWidth = containerWidth - 350; // Adjusted to leave space for the description panel
+        const containerWidth = container.node().clientWidth - 200;
+        const svgWidth = containerWidth - 50; // Adjusted to leave space for the description panel
         const containerHeight = 800; // Fixed height for the container
 
         // Clear any existing SVG and description panel content

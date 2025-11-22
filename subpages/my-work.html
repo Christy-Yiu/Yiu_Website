@@ -38,19 +38,23 @@
         </div>
     </header>
 
-
-    <section id="vis-scatterplot" class="scatter-text">
-        My works over the years
+    <section id="artworkbar">
+        <h2 class="artworkbartext"> Artworks I have created in the past</h2>
+        <div class="bar-buttons-container" id="filter-buttons">
+            <!-- Buttons will be generated here -->
+        </div>
+        <div id="chart"></div>
     </section>
 
-    <section id="vis-piechart">
+
+    <!-- <section id="vis-piechart">
         <div class="piechart-text"> Types of my digital artworks
             <p>Click on the pie sections for the subtypes</p>
         </div>
-    </section>
+    </section> -->
 
     <section id="vis-nodelink" class="nodelink-text">
-        Artworks related to my courses
+        Artworks related to my courses <br>
         <div id="nodelink-description-panel" class="nodelink-hidden">
             <button id="nodelink-back-button" class="nodelink-hidden">← Back to All</button>
             <h3 id="nodelink-panel-title"></h3>
@@ -71,10 +75,15 @@
     <script src="../code.js"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="../src/treechart.js"></script>
-    <script src="../src/scatterplot.js"></script>
+    <script src="../src/barchart.js"></script>
     <script src="../src/piechart.js"></script>
     <script src="../src/nodelink.js"></script>
     <script src="../src/adja_matrix.js"></script>
+    <footer>
+        Yiu Tsz Ching, Christy<br>
+        Email:<a href="mailto:christyyiu911@gmail.com">chrisyyiu911@gmail.com</a><br>
+        <a href="#nav">Back to top</a>
+    </footer>
 </body>
 
 </html>
