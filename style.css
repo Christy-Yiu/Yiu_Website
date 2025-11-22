@@ -967,3 +967,185 @@ footer a:hover {
     text-decoration: underline;
     /* adds underline on hover for clarity */
 }
+
+/* highlight scroll styles */
+.arthighlight {
+    width: 100%;
+    overflow: hidden;
+    /* Hide any overflow from the section itself */
+    background-color: #fff;
+    padding: 20px 0;
+    /* Vertical padding for the section */
+    margin-bottom: 20px;
+    border-radius: 0px;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+.highlight-title-heading {
+    text-align: center;
+    margin-bottom: 15px;
+    /* Adjusted for less tall caption */
+    color: darkslategrey;
+    font-size: 2em;
+    /* Adjusted font size for better height */
+    font-weight: 300;
+}
+
+/* Highlight Wrapper - This is the scrollable container */
+.highlight-wrapper {
+    width: 100%;
+    overflow-x: scroll;
+    /* Enable horizontal scrolling */
+    overflow-y: hidden;
+    /* Hide vertical scrollbar */
+    white-space: nowrap;
+    /* Keep all items in a single line */
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scrolling on iOS */
+    cursor: grab;
+    /* Indicate draggable area */
+    /* Hide scrollbar for different browsers */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+}
+
+/* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+.highlight-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+/* Highlight Gallery - This holds all the items */
+.highlight-gallery {
+    display: flex;
+    /* Use flexbox to arrange items horizontally */
+    flex-wrap: nowrap;
+    /* Prevent items from wrapping to the next line */
+    align-items: center;
+    /* Vertically align items in the middle */
+    gap: 30px;
+    /* Space between artwork items */
+    padding: 0 20px;
+    /* Horizontal padding inside the scrollable area */
+    height: 200px;
+    /* Fixed height for the gallery to keep images consistent */
+}
+
+/* Highlight Item - Individual artwork container */
+.highlight-item {
+    padding: 10px;
+    flex-shrink: 0;
+    /* Prevent items from shrinking */
+    width: 350px;
+    /* Default width for each artwork item */
+    height: 100%;
+    /* Take full height of the gallery */
+    background-color: #2e506a;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.highlight-item:hover {
+    transform: translateY(-5px);
+    /* Slight lift effect on hover */
+}
+
+/* Highlight Image */
+.highlight-image {
+    width: 100%;
+    height: 75%;
+    /* Image takes 75% of item height */
+    object-fit: cover;
+    /* Cover the area, cropping if necessary */
+    display: block;
+    border-bottom: 1px solid #eee;
+}
+
+/* Highlight Title */
+.highlight-title {
+    font-size: 1em;
+    /* Adjusted for less height */
+    color: #ffffff;
+    padding: 5px 10px;
+    /* Adjusted padding for less height */
+    margin: 0;
+    white-space: normal;
+    /* Allow title to wrap */
+    flex-grow: 1;
+    /* Allow title to take up remaining space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .highlight-gallery {
+        height: 350px;
+        gap: 20px;
+    }
+
+    .highlight-item {
+        width: 300px;
+    }
+
+    .highlight-title-heading {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 768px) {
+    .highlight-gallery {
+        height: 300px;
+        padding: 0 15px;
+    }
+
+    .highlight-item {
+        width: 250px;
+    }
+
+    .highlight-title {
+        font-size: 1em;
+        padding: 8px 10px;
+    }
+
+    .highlight-title-heading {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .highlight-gallery {
+        height: 250px;
+        padding: 0 10px;
+        gap: 15px;
+    }
+
+    .highlight-item {
+        width: 200px;
+    }
+
+    .highlight-image {
+        height: 70%;
+        /* Adjust image height for smaller items */
+    }
+
+    .highlight-title {
+        font-size: 0.9em;
+        padding: 5px 8px;
+    }
+
+    .highlight-title-heading {
+        font-size: 1.5em;
+    }
+}
