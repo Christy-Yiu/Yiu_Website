@@ -1,16 +1,16 @@
 (function () {
     // Sample artwork datafff
     const artworkHighlights = [
-        { src: '/images/highlight_gallery/image1.jpg', alt: 'Forest Path', title: 'Mystic Forest Path' },
-        { src: '/images/highlight_gallery/image2.jpg', alt: 'Beach Sunset', title: 'Golden Hour at the Beach' },
-        { src: '/images/highlight_gallery/image3.jpg', alt: 'Mountain Lake', title: 'Serene Mountain Lake' },
-        { src: '/images/highlight_gallery/image4.jpg', alt: 'Desert Landscape', title: 'Vast Desert Expanse' },
-        { src: '/images/highlight_gallery/image5.jpg', alt: 'City Lights', title: 'Urban Night Glow' },
-        { src: '/images/highlight_gallery/image6.jpg', alt: 'Abstract Painting', title: 'Dynamic Abstraction' },
-        { src: '/images/highlight_gallery/image7.jpg', alt: 'Old Town Street', title: 'Cobblestone Charm' },
-        { src: '/images/highlight_gallery/image8.jpg', alt: 'Starry Night', title: 'Cosmic Canvas' },
-        { src: '/images/highlight_gallery/image9.jpg', alt: 'Sculpture', title: 'Modern Sculpture' },
-        { src: '/images/highlight_gallery/image10.jpg', alt: 'Still Life', title: 'Classic Still Life' }
+        { filename: 'image1.jpg', alt: 'A tiny Trick', title: 'A tiny Trick' },
+        { filename: 'image2.jpg', alt: 'Youre my last invitee', title: 'Youre my last invitee' },
+        { filename: 'image3.jpg', alt: 'homeridden', title: 'Homeridden' },
+        { filename: 'image4.jpg', alt: 'Farewell, Spirits', title: 'Farewell, Spirits' },
+        { filename: 'image5.jpg', alt: 'Be my digital friend', title: 'Be my digital friend' },
+        { filename: 'image6.jpg', alt: 'weather forecast animation', title: 'The most Localized Fluffy Weather Forecast' },
+        { filename: 'image7.jpg', alt: 'white hole', title: 'White Hole Project' },
+        { filename: 'image8.jpg', alt: 'mv', title: 'Interactive MV' },
+        { filename: 'image9.jpg', alt: 'firedragon', title: 'Within the Fire Dragon' },
+        { filename: 'image10.jpg', alt: 'soundwork', title: 'Stationery Tidying ASMR' }
     ];
 
     // Select the highlight section
@@ -33,7 +33,7 @@
 
     // Add image to each item
     items.append("img")
-        .attr("src", d => d.src)
+        .attr("src", d => "./images/highlight_gallery/" + d.filename)
         .attr("alt", d => d.alt)
         .attr("class", "highlight-image");
 
