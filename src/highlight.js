@@ -1,5 +1,5 @@
 (function () {
-    // Sample artwork data
+    // Sample artwork datafff
     const artworkHighlights = [
         { src: '/images/highlight_gallery/image1.jpg', alt: 'Forest Path', title: 'Mystic Forest Path' },
         { src: '/images/highlight_gallery/image2.jpg', alt: 'Beach Sunset', title: 'Golden Hour at the Beach' },
