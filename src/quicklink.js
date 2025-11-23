@@ -17,8 +17,8 @@
         {
             id: 'cv',
             imageSrc: 'https://i.imgur.com/MpYali2.jpeg',
-            caption: 'cv',
-            description: 'Link to my CV document for easy reference.',
+            caption: 'CV',
+            description: 'Link to my CV document for quick reference.',
             url: 'https://docs.google.com/document/d/1rr0ovCMOCspKG-bNweyGonhS5CIS9lI3NPVXDCO-H6Q/edit?usp=sharing' // Added URL for navigation
         }
 

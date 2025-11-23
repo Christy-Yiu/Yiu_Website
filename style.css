@@ -68,7 +68,7 @@ h1 {
 
 /* Styles for the quicklink section container */
 #quicklink {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0);
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
@@ -482,25 +482,15 @@ h1 {
     margin: 5px;
 }
 
-/* Quote image */
 
-.quote {
-    padding: 0.5em;
-    width: 40em;
-    height: 20em;
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.5em;
-    font-weight: 300;
-}
-
-.quoteimg {
-    align-self: center;
-    max-width: 75%;
-    height: auto;
-}
 
 /* tree diagram styles*/
+.tree-text {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
 .tree-container {
     width: 100%;
     overflow-x: auto;
@@ -512,20 +502,20 @@ h1 {
 
 /* Styling for the SVG elements */
 .node circle {
-    fill: #999;
-    stroke: steelblue;
+    fill: #c0cce3;
+    stroke: rgb(99, 185, 255);
     stroke-width: 3px;
 }
 
 .node text {
-    font: 12px sans-serif;
-    fill: #333;
+    font: 18px sans-serif;
+    fill: darkslategray;
 }
 
 .link {
     fill: none;
     stroke: #ccc;
-    stroke-width: 2px;
+    stroke-width: 15px;
 }
 
 /* Specific styling for the root node */
@@ -538,6 +528,51 @@ h1 {
     font-weight: bold;
     fill: #1a4d73;
 }
+
+.tree-zoom-button {
+    position: absolute;
+    top: 60px;
+    /* Adjust as needed */
+    right: 15px;
+    /* Adjust as needed */
+    padding: 8px 12px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    z-index: 10;
+    /* Ensure it's above the SVG */
+    transition: background-color 0.2s ease;
+}
+
+.tree-zoom-button:hover {
+    background-color: #e0e0e0;
+}
+
+.tree-reset-button {
+    position: absolute;
+    top: 15px;
+    /* Adjust as needed */
+    right: 15px;
+    /* Adjust as needed */
+    padding: 8px 12px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    z-index: 10;
+    /* Ensure it's above the SVG */
+    transition: background-color 0.2s ease;
+}
+
+.tree-reset-button:hover {
+    background-color: #e0e0e0;
+}
+
 
 /* Node links style*/
 .nodelink-text {
@@ -979,8 +1014,8 @@ footer a:hover {
     margin-bottom: 20px;
     border-radius: 0px;
     text-align: center;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
 
 .highlight-title-heading {
@@ -1148,4 +1183,39 @@ footer a:hover {
     .highlight-title-heading {
         font-size: 1.5em;
     }
+}
+
+/* Info List styles */
+#myinfo {
+    align-self: center;
+    width: 75em;
+    margin: 2em auto;
+    background-color: white;
+    padding: 3em;
+    border-radius: 4em;
+
+}
+
+.r_info {
+    text-align: right;
+    font-weight: normal;
+    color: rgb(60, 77, 101);
+    font-size: 18px;
+}
+
+.l_info {
+    font-size: 18px;
+    float: left;
+    font-weight: bold;
+    color: rgb(48, 47, 79);
+}
+
+.infotitle {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.infosubtitle {
+    font-size: 24px;
+    font-weight: bolder;
 }
