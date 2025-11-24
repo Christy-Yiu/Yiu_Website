@@ -1218,3 +1218,153 @@ footer a:hover {
     font-size: 24px;
     font-weight: bolder;
 }
+
+/*Gallery styles*/
+/* Gallery Container Styling */
+
+.art-name {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2em;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 20px;
+    color: darkslategrey;
+}
+
+#gallery {
+    width: 100%;
+    /* Full screen width */
+    max-width: 1500px;
+    /* Optional: Max width for very large screens */
+    margin: 0 auto;
+    /* Center the container if max-width is set */
+    padding: 50px;
+    display: flex;
+    /* Use flexbox for layout */
+    flex-wrap: wrap;
+    /* Allow items to wrap to the next line */
+    justify-content: space-between;
+    /* Distribute items evenly with space between them */
+    box-sizing: border-box;
+    /* Include padding in the element's total width and height */
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+
+}
+
+/* Individual Artwork Item Styling */
+.artwork-link {
+    text-decoration: none;
+    /* Remove underline from links */
+    color: inherit;
+    /* Inherit text color */
+    display: block;
+    /* Make the link fill its container */
+    flex: 1 1 calc(50% - 20px);
+    /* 50% width minus combined margin (10px left + 10px right) */
+    margin: 10px;
+    /* Margin around each artwork item */
+    box-sizing: border-box;
+    max-width: calc(50% - 20px);
+    /* Ensure max two items per row */
+    min-width: 280px;
+    /* Minimum width before wrapping to single column */
+}
+
+.artwork-item {
+    position: relative;
+    /* Needed for absolute positioning of the overlay */
+    overflow: hidden;
+    /* Hide parts of the overlay that might extend beyond */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out;
+    /* Smooth scale effect on hover */
+}
+
+.artwork-item:hover {
+    transform: translateY(-5px);
+    /* Lift effect on hover */
+}
+
+/* Image Styling */
+.artwork-item img {
+    width: 100%;
+    /* Image fills its container */
+    height: auto;
+    /* Maintain aspect ratio */
+    display: block;
+    /* Remove extra space below image */
+    border-radius: 8px 8px 0 0;
+    /* Rounded top corners */
+}
+
+/* Overlay Styling */
+.artwork-overlay {
+    position: absolute;
+    /* Position over the image */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(145, 187, 255, 0.9);
+    display: flex;
+    /* Use flexbox to center caption text */
+    align-items: center;
+    /* Center vertically */
+    justify-content: center;
+    /* Center horizontally */
+    opacity: 0;
+    /* Initially hidden */
+    transition: opacity 0.3s ease-in-out;
+    /* Smooth fade-in/out */
+    pointer-events: none;
+    /* Allow clicks to pass through to the link */
+    border-radius: 8px;
+    /* Match item border radius */
+}
+
+/* Show overlay on hover */
+.artwork-item:hover .artwork-overlay {
+    opacity: 1;
+}
+
+/* Caption Text Styling */
+.artwork-caption {
+    color: white;
+    font-size: 1.6em;
+    /* Large text for readability */
+    font-weight: normal;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Responsive Design: One image per row on smaller screens */
+@media (max-width: 768px) {
+    .artwork-link {
+        flex: 1 1 100%;
+        /* One item per row */
+        max-width: 100%;
+        margin: 10px 0;
+        /* Adjust margin for single column */
+    }
+
+    #gallery {
+        padding: 10px;
+        /* Adjust padding for smaller screens */
+    }
+
+    .artwork-caption {
+        font-size: 1.3em;
+        /* Slightly smaller font on mobile */
+    }
+}
+
+/* Responsive Design: Adjust for very small screens if needed */
+@media (max-width: 480px) {
+    .artwork-caption {
+        font-size: 1.1em;
+        padding: 10px;
+    }
+}
