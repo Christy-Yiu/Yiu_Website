@@ -31,7 +31,8 @@ button {
 
 }
 
-button.subpage {
+
+span.subpage {
     color: darkgray;
     font: 30px Arial;
     border-radius: 0.3em;
@@ -39,17 +40,7 @@ button.subpage {
     background-color: white;
     border-color: lightblue;
     margin-top: 0.5em;
-
-}
-
-a.subpage {
-    color: darkgray;
-    font: 30px Arial;
-    border-radius: 0.3em;
-    font-size: 1.5em;
-    background-color: white;
-    border-color: lightblue;
-    margin-top: 0.5em;
+    
 
 }
 
@@ -293,6 +284,8 @@ body {
     /* remove default spacing */
     /* make sure it covers the full viewport */
     background: linear-gradient(to bottom, #e6eeff, #5A88A1);
+    opacity: 0;
+    transition: opacity .25s;
 
 }
 
@@ -1260,20 +1253,17 @@ footer a:hover {
     /* Inherit text color */
     display: block;
     /* Make the link fill its container */
-    flex: 1 1 calc(50% - 20px);
-    /* 50% width minus combined margin (10px left + 10px right) */
+    width: 650px;
+    /* Fixed width for all buttons */
+    height: 400px;
+    /* Fixed height for all buttons */
     margin: 10px;
     /* Margin around each artwork item */
-    box-sizing: border-box;
-    max-width: calc(50% - 20px);
-    /* Ensure max two items per row */
-    min-width: 280px;
-    /* Minimum width before wrapping to single column */
+    position: relative;
+    /* Needed for absolute positioning of the overlay */
 }
 
 .artwork-item {
-    position: relative;
-    /* Needed for absolute positioning of the overlay */
     overflow: hidden;
     /* Hide parts of the overlay that might extend beyond */
     background-color: #fff;
@@ -1291,13 +1281,15 @@ footer a:hover {
 /* Image Styling */
 .artwork-item img {
     width: 100%;
-    /* Image fills its container */
-    height: auto;
-    /* Maintain aspect ratio */
+    /* Fill width of button */
+    height: 100%;
+    /* Fill height of button */
+    object-fit: cover;
+    /* Maintain aspect ratio while covering the area */
     display: block;
     /* Remove extra space below image */
-    border-radius: 8px 8px 0 0;
-    /* Rounded top corners */
+    border-radius: 8px;
+    /* Rounded corners */
 }
 
 /* Overlay Styling */
@@ -1308,7 +1300,8 @@ footer a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(145, 187, 255, 0.9);
+    background-color: rgba(138, 200, 255, 0.9);
+    /* Semi-transparent black */
     display: flex;
     /* Use flexbox to center caption text */
     align-items: center;
@@ -1333,19 +1326,24 @@ footer a:hover {
 /* Caption Text Styling */
 .artwork-caption {
     color: white;
-    font-size: 1.6em;
-    /* Large text for readability */
-    font-weight: normal;
+    font-size: 1.2em;
+    /* Adjustable font size */
+    font-weight: bold;
     text-align: center;
-    padding: 15px;
+    padding: 5px;
+    /* Reduced padding for uniformity */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    /* Add subtle shadow for contrast */
+    line-height: 1.3;
 }
 
-/* Responsive Design: One image per row on smaller screens */
+/* Responsive Design: Stack items on smaller screens */
 @media (max-width: 768px) {
     .artwork-link {
-        flex: 1 1 100%;
-        /* One item per row */
-        max-width: 100%;
+        width: 100%;
+        /* Full width for single item per row */
+        height: auto;
+        /* Auto height to maintain aspect ratio */
         margin: 10px 0;
         /* Adjust margin for single column */
     }
@@ -1353,18 +1351,5 @@ footer a:hover {
     #gallery {
         padding: 10px;
         /* Adjust padding for smaller screens */
-    }
-
-    .artwork-caption {
-        font-size: 1.3em;
-        /* Slightly smaller font on mobile */
-    }
-}
-
-/* Responsive Design: Adjust for very small screens if needed */
-@media (max-width: 480px) {
-    .artwork-caption {
-        font-size: 1.1em;
-        padding: 10px;
     }
 }

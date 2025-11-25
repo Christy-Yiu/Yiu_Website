@@ -8,31 +8,31 @@ const artworkData = [
             },
             {
                 id: 2,
-                imageUrl: "https://via.placeholder.com/600x400/33FF57/000000?text=Artwork+Two",
+                imageUrl: "./../images/gallery_thumbnails/thumb_2.jpg",
                 caption: "Fanart Illustrations",
                 linkUrl: "./art_detail/art-2.html" 
             },
             {
                 id: 3,
-                imageUrl: "https://via.placeholder.com/600x400/3357FF/FFFFFF?text=Artwork+Three",
+                imageUrl: "./../images/gallery_thumbnails/thumb_3.jpg",
                 caption: "Misc. Illustrations",
                 linkUrl: "./art_detail/art-3.html" 
             },
             {
                 id: 4,
-                imageUrl: "https://via.placeholder.com/600x400/FFFF33/000000?text=Artwork+Four",
+                imageUrl: "./../images/gallery_thumbnails/thumb_4.jpg",
                 caption: "Photography",
                 linkUrl: "./art_detail/art-4.html" 
             },
             {
                 id: 5,
-                imageUrl: "https://via.placeholder.com/600x400/FF33FF/FFFFFF?text=Artwork+Five",
+                imageUrl: "./../images/gallery_thumbnails/thumb_5.jpg",
                 caption: "Animation Works",
                 linkUrl: "./art_detail/art-5.html" 
             },
             {
                 id: 6,
-                imageUrl: "https://via.placeholder.com/600x400/33FFFF/000000?text=Artwork+Six",
+                imageUrl: "./../images/gallery_thumbnails/thumb_6.jpg",
                 caption: "Video works",
                 linkUrl: "./art_detail/art-6.html" 
             }
