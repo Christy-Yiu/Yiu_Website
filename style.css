@@ -40,7 +40,7 @@ span.subpage {
     background-color: white;
     border-color: lightblue;
     margin-top: 0.5em;
-    
+
 
 }
 
@@ -1351,5 +1351,85 @@ footer a:hover {
     #gallery {
         padding: 10px;
         /* Adjust padding for smaller screens */
+    }
+}
+
+/*Image slides styles*/
+section.imageslide {
+    position: relative;
+    /* Enable absolute positioning of controls */
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    /* Ensure buttons appear over images */
+}
+
+.showart-category-title {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.showart-image-display {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.showart-nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(52, 152, 219, 0.8);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2em;
+    opacity: 0;
+    /* Hidden by default */
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.showart-nav-button:hover {
+    background-color: rgba(46, 139, 87, 0.9);
+}
+
+.showart-prev-button {
+    left: 10px;
+    /* Position left */
+}
+
+.showart-next-button {
+    right: 10px;
+    /* Position right */
+}
+
+section.imageslide:hover .showart-nav-button {
+    opacity: 1;
+    /* Show buttons on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    section.imageslide {
+        padding: 15px;
+    }
+
+    .showart-category-title {
+        font-size: 1.5em;
+    }
+
+    .showart-nav-button {
+        padding: 10px;
+        font-size: 1em;
     }
 }
