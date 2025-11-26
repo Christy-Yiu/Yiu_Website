@@ -3,22 +3,22 @@
         {
             name: "Original Illustrations",
             folder: "1",
-            images: ["Blizzard2024.png", "Spirits2024.png", "Bonfire2024.jpg", "Heroes2024.jpg", "Blizzard2023.jpg"]
+            images: ["Blizzard2024.png", "Spirits2024.png", "Bonfire2024.jpg", "Heroes2024.jpg", "Blizzard2023.jpg", "devil.png", "ISP_Share.png"]
         },
         {
             name: "Fanart Illustrations",
             folder: "2",
-            images: ["fanart_01.jpg", "fanart_02.png", "fanart_03.jpg"]
+            images: ["Finii_14.png", "XiaoContest.png", "ScaraModern.png", "Neuvilette.jpg"]
         },
         {
             name: "Misc. Illustrations",
             folder: "3",
-            images: ["misc_01.jpg", "misc_02.png"]
+            images: ["Marin.png", "Tale_of_Takako.png", "emoticons.png"]
         },
         {
             name: "Photography",
             folder: "4",
-            images: ["photo_01.jpg", "photo_02.jpg"]
+            images: ["origami.jpg", "photo_02.jpg"]
         },
         {
             name: "Animation",
@@ -31,9 +31,21 @@
             images: ["video_01.mp4"]
         }
     ];
-
-    let currentCategoryIndex = 0;
-    let currentImageIndex = 0;
+    // determine current category based on page URL
+    if (window.location.pathname.includes("art-1.html")) {
+        currentCategoryIndex = 0; // Folder 1
+    } else if (window.location.pathname.includes("art-2.html")) {
+        currentCategoryIndex = 1; // Folder 2
+    } else if (window.location.pathname.includes("art-3.html")) {
+        currentCategoryIndex = 2; // Folder 3
+    } else if (window.location.pathname.includes("art-4.html")) {
+        currentCategoryIndex = 3; // Folder 4
+    } else if (window.location.pathname.includes("art-5.html")) {
+        currentCategoryIndex = 4; // Folder 5
+    } else if (window.location.pathname.includes("art-6.html")) {
+        currentCategoryIndex = 5; // Folder 6
+    }
+    let currentImageIndex = 0; // reset to 0
 
     const categoryTitle = d3.select(".showart-category-title");
     const imageDisplay = d3.select(".showart-image-display");
