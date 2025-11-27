@@ -1416,7 +1416,7 @@ section.imageslide:hover .showart-nav-button {
 
 .gallery_para {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
@@ -1425,7 +1425,7 @@ section.imageslide:hover .showart-nav-button {
 
 .gallery_para_r {
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
@@ -1452,4 +1452,9 @@ h1.right {
         width: 400px;
     height: 400px;
     object-fit: scale-down;
+}
+
+.art-video {
+    align-items: left;
+    justify-content: left;
 }
