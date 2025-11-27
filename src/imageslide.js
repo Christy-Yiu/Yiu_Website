@@ -18,18 +18,8 @@
         {
             name: "Photography",
             folder: "4",
-            images: ["origami.jpg", "photo_02.jpg"]
+            images: ["origami.jpg", "Dragon_1.jpg", "Dragon_2.jpg", "Dragon_3.jpg", "Dragon_4.jpg", "home_1.jpg", "home_2.jpg", "home_3.jpg", "home_4.jpg", "misc_1.jpg"]
         },
-        {
-            name: "Animation",
-            folder: "5",
-            images: ["animation_01.gif"]
-        },
-        {
-            name: "Video Works",
-            folder: "6",
-            images: ["video_01.mp4"]
-        }
     ];
     // determine current category based on page URL
     if (window.location.pathname.includes("art-1.html")) {
@@ -40,12 +30,8 @@
         currentCategoryIndex = 2; // Folder 3
     } else if (window.location.pathname.includes("art-4.html")) {
         currentCategoryIndex = 3; // Folder 4
-    } else if (window.location.pathname.includes("art-5.html")) {
-        currentCategoryIndex = 4; // Folder 5
-    } else if (window.location.pathname.includes("art-6.html")) {
-        currentCategoryIndex = 5; // Folder 6
     }
-    let currentImageIndex = 0; // reset to 0
+    let currentImageIndex = 0; // reset to first image of slideshow
 
     const categoryTitle = d3.select(".showart-category-title");
     const imageDisplay = d3.select(".showart-image-display");

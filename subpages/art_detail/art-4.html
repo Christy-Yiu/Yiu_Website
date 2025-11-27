@@ -1,0 +1,95 @@
+<html>
+
+<head>
+    <!-- ../ Redrirects to the primary folder-->
+    <link href="../../style.css" rel="stylesheet" />
+    <title>Christy Yiu</title>
+</head>
+
+<body>
+
+    <!-- <h1>Welcome</h1> -->
+    <header>
+        <nav id="nav">
+            <!-- Navigation bar -->
+            <ul>
+                <p class="art-name">Gallery</p>
+
+                <span id="homepage" class="subpage" onclick="transitionToPage('../../index.html')">Home</span>
+                <span id="About" class="subpage" onclick="transitionToPage('../my-work.html')">About me</span>
+                <span id="backgallery" class="subpage" onclick="transitionToPage('../gallery.html')">Back to
+                    Gallery</span>
+
+
+            </ul>
+        </nav>
+        <!-- Photo + self intro -->
+    </header>
+    <section class="imageslide">
+        <h1>Photography</h1>
+        <br>
+        <img class="showart-image-display" src="" alt="Slideshow Image">
+        <button id="prev-button" class="showart-nav-button showart-prev-button">&lt;</button>
+        <button id="next-button" class="showart-nav-button showart-next-button">&gt;</button>
+        <br><br>
+    </section>
+
+    <section class="art-text">
+        <div class="gallery_para">
+            <img class="circleimg_small" src="../../images/gallery/4/origami.jpg" />
+            <div>
+                <h1>Random Shots</h1>
+                <p>A pair of tiny paperfold origami found in a MTR station.
+                    <br>
+                    The two bird origami were in different postures, both wanting to fly. I liked how it was found as a
+                    suprise find.
+
+                </p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="gallery_para_r">
+            <div>
+                <h1>Fire Dragon Series</h1>
+                <p>Series of the traditional Fire Dragon Dance in Tai Hang, Hong Kong.
+                    <br> the whole dance takes hours and the dragon made out of incense sticks were a memorable sight.
+                    <br> I could feel their pride as they dance through the streets.
+
+
+                </p>
+            </div>
+            <img class="circleimg_small" src="../../images/gallery/4/fire.jpg" />
+        </div>
+        <br><br>
+        <div class="gallery_para">
+            <img class="circleimg_small" src="../../images/gallery/4/home.jpg" />
+            <div>
+                <h1>Homeridden Series</h1>
+                <p>Series of pictures of my home, taken during a typhoon.
+                    <br>
+                    The time was supposed to be noon, but due to the typhoon, the environment made the house very dark
+                    without any lights.
+                    <br> It felt very suppressive, like an exaggreated form of being stuck at home, thus the time
+                    "homeridden".
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="../../code.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="../../src/imageslide.js"></script>
+
+
+
+    <footer>
+        Yiu Tsz Ching, Christy<br>
+        Email:<a href="mailto:christyyiu911@gmail.com">chrisyyiu911@gmail.com</a><br>
+        <a href="#nav">Back to top</a>
+    </footer>
+</body>
+
+</html>

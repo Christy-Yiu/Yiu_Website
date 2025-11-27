@@ -27,7 +27,7 @@ button {
     color: grey;
     font: 20px Georgia;
     border-radius: 0.4em;
-    border-color: lightseagreen;
+    border-color: rgb(32, 124, 178);
 
 }
 
@@ -828,56 +828,14 @@ h1 {
     font-size: 20px;
     font-weight: 300;
     width: 100%;
-    max-width: 1200px;
+    max-width: 600px;
     /* Max width for the map */
-    height: 800px;
-    /* Fixed height for the map area */
     margin: 20px auto;
     /* Center the container */
     background-color: #ffffff;
     /* Light blue for ocean/background */
     overflow: hidden;
     /* Hide any map parts that go outside */
-}
-
-/* Styles for country boundaries */
-.visitormap-country-boundary {
-    fill: #82b5cebb;
-    stroke: #384e5d;
-    stroke-width: 0.5px;
-}
-
-.visitormap-country-boundary:hover {
-    fill: #8ec6ff;
-}
-
-/* Styles for individual visitor dots */
-.visitormap-visitor-dot {
-    fill: rgb(6, 37, 113);
-    opacity: 0.4;
-    stroke: none;
-}
-
-/* Styles for the map tooltip */
-.visitormap-map-tooltip {
-    position: absolute;
-    text-align: center;
-    padding: 8px;
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid #333;
-    border-radius: 4px;
-    pointer-events: none;
-    /* Tooltip should not block mouse events */
-    opacity: 0;
-    /* Hidden by default */
-    font-size: 12px;
-    z-index: 100;
-    /* Ensure tooltip is above other elements */
-}
-
-/* Cat size */
-.catshake {
-    image-resolution: 75%;
 }
 
 /* bar chart styles */
@@ -1387,11 +1345,11 @@ section.imageslide {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(52, 152, 219, 0.8);
+    background-color: rgba(75, 107, 235, 0.8);
     color: white;
     border: none;
     padding: 12px;
-    border-radius: 50%;
+    border-radius: 5px;
     cursor: pointer;
     font-size: 1.2em;
     opacity: 0;
@@ -1400,7 +1358,7 @@ section.imageslide {
 }
 
 .showart-nav-button:hover {
-    background-color: rgba(46, 139, 87, 0.9);
+    background-color: rgba(51, 58, 119, 0.9);
 }
 
 .showart-prev-button {
@@ -1432,4 +1390,66 @@ section.imageslide:hover .showart-nav-button {
         padding: 10px;
         font-size: 1em;
     }
+}
+
+.circleimg {
+    width: 400px;
+    /* set a fixed width */
+    height: 400px;
+    /* set a fixed height */
+    border-radius: 50%;
+    /* makes the image circular */
+    object-fit: cover;
+}
+
+.circleimg_small {
+    width: 200px;
+    /* set a fixed width */
+    height: 200px;
+    /* set a fixed height */
+    border-radius: 50%;
+    /* makes the image circular */
+    object-fit: cover;
+    align-items: center;
+
+}
+
+.gallery_para {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    text-align: left;
+}
+
+.gallery_para_r {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    text-align: right;
+}
+
+h1.right {
+    text-align: right;
+}
+
+.art-text {
+    position: relative;
+    /* Enable absolute positioning of controls */
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.art-img-video{
+        width: 400px;
+    height: 400px;
+    object-fit: scale-down;
 }
