@@ -632,7 +632,7 @@ h1 {
 /* Renamed the selector for node text */
 .nodelink-node text {
     /* Updated from .node text */
-    font-size: 10px;
+    font-size: 12px;
     text-anchor: middle;
     fill: #333;
     pointer-events: none;
@@ -894,8 +894,6 @@ h2.artworkbartext {
 }
 
 .bar-filter-button {
-    background-color: #5a7ecd;
-    /* MediumSlateBlue */
     color: white;
     border: none;
     padding: 10px 15px;
@@ -907,8 +905,7 @@ h2.artworkbartext {
 }
 
 .bar-filter-button:hover {
-    background-color: #3d5ea4;
-    /* DarkSlateBlue */
+
     transform: translateY(-2px);
 }
 

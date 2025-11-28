@@ -1,4 +1,4 @@
-(function(){
+(function () {
     // Data structure for nodes and links
     const graphData = {
         nodes: [
@@ -16,14 +16,15 @@
             { id: "C11", name: "Creative Media Studio II", type: "course" },
             { id: "C12", name: "Narrative Strg & Aesthetics", type: "course" },
 
-            // Artworks (type: 'artwork')
-            { id: "A1", name: "Stationery Tidying ASMR", type: "artwork" },
-            { id: "A2", name: "Personal Website", type: "artwork" },
-            { id: "A3", name: "Short Animation: Fluffy weather forecast", type: "artwork" },
-            { id: "A4", name: "Short film: Be my Digital Friend", type: "artwork" },
-            { id: "A5", name: "Game Concept: Last Dawn", type: "artwork" },
-            { id: "A6", name: "Digital Illustrations", type: "artwork" },
-            { id: "A7", name: "Processing.org MV: Infinity Heaven", type: "artwork" },
+            // Artworks (type: 'artwork') - These can have custom radii
+            // Added 'radius' property to artwork nodes for customizable sizes
+            { id: "A1", name: "Stationery Tidying ASMR", type: "artwork", radius: 30 },
+            { id: "A2", name: "Personal Website", type: "artwork", radius: 20 }, 
+            { id: "A3", name: "Short Animation: Fluffy weather forecast", type: "artwork", radius: 30 },
+            { id: "A4", name: "Short film: Be my Digital Friend", type: "artwork", radius: 40 },
+            { id: "A5", name: "Game Concept: Last Dawn", type: "artwork", radius: 25 },
+            { id: "A6", name: "Digital Illustrations", type: "artwork", radius: 20 }, 
+            { id: "A7", name: "Processing.org MV: Infinity Heaven", type: "artwork", radius: 20 },
         ],
         links: [
             { source: "A1", target: "C1" },
@@ -46,15 +47,15 @@
             { source: "A5", target: "A6" },
             { source: "A6", target: "C10" },
             { source: "A6", target: "C6" },
-            { source: "C5", target: "C6"},
-            { source: "A7", target: "C1"},
-            { source: "A7", target: "C8"},
-            { source: "A7", target: "C9"},
+            { source: "C5", target: "C6" },
+            { source: "A7", target: "C1" },
+            { source: "A7", target: "C8" },
+            { source: "A7", target: "C9" },
         ]
     };
 
     // --- Node Descriptions ---
-const nodeDescriptions = {
+    const nodeDescriptions = {
         "C1": "<strong>Music for Film:</strong> Explores how music acts as a strong part of movies, editing sound elements into films.",
         "C2": "<strong>Sound Objects:</strong> Explores sonic art in terms of ASMR and sound",
         "C3": "<strong>Sonic Art & History of Noise:</strong> A theoretical course examining the historical development of sound art and the role of noise in contemporary art forms.",
@@ -79,10 +80,14 @@ const nodeDescriptions = {
 
     // --- Global State Variables ---
     let focusedNodeId = null;
-    const originalNodeRadius = 20;
+    const originalNodeRadius = 15; // Default radius for course nodes and artwork nodes without a specified radius
     const originalLinkStrokeWidth = 2; // Default stroke width for links
-    // Removed unused zoom/scale constants as they are now directly calculated or used in transitions.
     const animationDuration = 300; // Duration for all transitions in milliseconds
+
+    // Helper function to get the base radius of a node, considering custom radii for artwork
+    function getBaseNodeRadius(d) {
+        return d.type === "artwork" && d.radius !== undefined ? d.radius : originalNodeRadius;
+    }
 
     function drawNodeLinkDiagram() {
         const container = d3.select("#vis-nodelink");
@@ -102,7 +107,7 @@ const nodeDescriptions = {
 
         // Define colors
         const courseColor = "#66c2a5"; // A single color for all course nodes
-        const artworkColorScale = d3.scaleOrdinal(d3.schemeCategory10); // Different colors for artwork nodes
+        const artworkColor = "#253e77ff"; // Different colors for artwork nodes
 
         // Initialize the force simulation
         const simulation = d3.forceSimulation(graphData.nodes)
@@ -140,9 +145,10 @@ const nodeDescriptions = {
 
         node.append("circle")
             .attr("class", "nodelink-node-circle")
-            .attr("r", originalNodeRadius)
-            .attr("fill", d => d.type === "course" ? courseColor : artworkColorScale(d.id))
-            .on("mouseover", function(event, d) {
+            // MODIFIED: Use getBaseNodeRadius for initial radius
+            .attr("r", d => getBaseNodeRadius(d))
+            .attr("fill", d => d.type === "course" ? courseColor : artworkColor)
+            .on("mouseover", function (event, d) {
                 tooltip.transition()
                     .duration(200)
                     .style("opacity", .9);
@@ -150,16 +156,16 @@ const nodeDescriptions = {
                     .style("left", (event.pageX + 10) + "px")
                     .style("top", (event.pageY - 28) + "px");
             })
-            .on("mousemove", function(event) {
+            .on("mousemove", function (event) {
                 tooltip.style("left", (event.pageX + 10) + "px")
-                       .style("top", (event.pageY - 28) + "px");
+                    .style("top", (event.pageY - 28) + "px");
             })
-            .on("mouseout", function(d) {
+            .on("mouseout", function (d) {
                 tooltip.transition()
                     .duration(500)
                     .style("opacity", 0);
             })
-            .on("click", function(event, d) {
+            .on("click", function (event, d) {
                 event.stopPropagation();
                 toggleNodeFocus(d.id);
             });
@@ -178,15 +184,14 @@ const nodeDescriptions = {
                 .attr("y2", d => d.target.y);
 
             node.each(d => {
-                d.x = Math.max(originalNodeRadius, Math.min(svgWidth - originalNodeRadius, d.x));
-                d.y = Math.max(originalNodeRadius, Math.min(containerHeight - originalNodeRadius, d.y));
+                // MODIFIED: Use getBaseNodeRadius for boundary checks
+                const currentRadius = getBaseNodeRadius(d);
+                d.x = Math.max(currentRadius, Math.min(svgWidth - currentRadius, d.x));
+                d.y = Math.max(currentRadius, Math.min(containerHeight - currentRadius, d.y));
             });
 
             node
                 .attr("transform", d => `translate(${d.x},${d.y})`);
-
-            // Apply visual updates after positions are calculated
-            // updateVisualization(); // Do not call here, only on focus/unfocus
         });
 
         // --- Interaction Functions ---
@@ -224,24 +229,28 @@ const nodeDescriptions = {
                 connectedNodeIds.add(focusedNodeId); // Add the focused node itself
 
                 // Update nodes with transitions
-                allNodes.each(function(d) {
+                allNodes.each(function (d) {
                     const circle = d3.select(this).select(".nodelink-node-circle");
                     const text = d3.select(this).select(".nodelink-node-text");
+                    const baseRadius = getBaseNodeRadius(d); // Get the node's individual base radius
 
                     if (d.id === focusedNodeId) {
-                        circle.transition().duration(animationDuration).attr("r", originalNodeRadius * 2).style("opacity", 1);
+                        // MODIFIED: Scale based on node's baseRadius
+                        circle.transition().duration(animationDuration).attr("r", baseRadius * 2).style("opacity", 1);
                         text.transition().duration(animationDuration).style("opacity", 1).style("font-weight", "bold");
                     } else if (connectedNodeIds.has(d.id)) {
-                        circle.transition().duration(animationDuration).attr("r", originalNodeRadius * 1.2).style("opacity", 1);
+                        // MODIFIED: Scale based on node's baseRadius
+                        circle.transition().duration(animationDuration).attr("r", baseRadius * 1.2).style("opacity", 1);
                         text.transition().duration(animationDuration).style("opacity", 1).style("font-weight", "normal");
                     } else {
-                        circle.transition().duration(animationDuration).attr("r", originalNodeRadius * 0.5).style("opacity", 0.2);
+                        // MODIFIED: Scale based on node's baseRadius
+                        circle.transition().duration(animationDuration).attr("r", baseRadius * 0.5).style("opacity", 0.2);
                         text.transition().duration(animationDuration).style("opacity", 0.3).style("font-weight", "normal");
                     }
                 });
 
                 // Update links with transitions
-                allLinks.each(function(d) {
+                allLinks.each(function (d) {
                     const linkSelection = d3.select(this);
                     if (d.source.id === focusedNodeId || d.target.id === focusedNodeId) {
                         linkSelection.transition().duration(animationDuration).attr("stroke-width", originalLinkStrokeWidth * 1.5).attr("stroke-opacity", 1);
@@ -255,8 +264,9 @@ const nodeDescriptions = {
                 backButton.classed("nodelink-hidden", true);
 
                 // Reset all nodes to original state with transitions
-                allNodes.each(function(d) {
-                    d3.select(this).select(".nodelink-node-circle").transition().duration(animationDuration).attr("r", originalNodeRadius).style("opacity", 1);
+                allNodes.each(function (d) {
+                    // MODIFIED: Reset to node's baseRadius
+                    d3.select(this).select(".nodelink-node-circle").transition().duration(animationDuration).attr("r", getBaseNodeRadius(d)).style("opacity", 1);
                     d3.select(this).select(".nodelink-node-text").transition().duration(animationDuration).style("opacity", 1).style("font-weight", "normal");
                 });
                 // Reset all links to original state with transitions
@@ -286,8 +296,10 @@ const nodeDescriptions = {
         }
 
         function dragged(event, d) {
-            d.fx = Math.max(originalNodeRadius, Math.min(svgWidth - originalNodeRadius, event.x));
-            d.fy = Math.max(originalNodeRadius, Math.min(containerHeight - originalNodeRadius, event.y));
+            // MODIFIED: Use getBaseNodeRadius for boundary checks during drag
+            const currentRadius = getBaseNodeRadius(d);
+            d.fx = Math.max(currentRadius, Math.min(svgWidth - currentRadius, event.x));
+            d.fy = Math.max(currentRadius, Math.min(containerHeight - currentRadius, event.y));
         }
 
         function dragended(event, d) {

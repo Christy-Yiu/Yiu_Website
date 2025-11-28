@@ -4,6 +4,28 @@
     const width = 900 - margin.left - margin.right;
     const height = 500 - margin.top - margin.bottom;
 
+    const buttonColors = {
+        "Illustration": {
+            base: "#89c7baff",
+            hover: "#a6e1d8ff",
+            active: "#67a49eff"
+        },
+        "Photography": {
+            base: "#5f82b3ff",
+            hover: "#84a8d1ff",
+            active: "#475e8eff"
+        },
+        "Animation": {
+            base: "#565e99ff",
+            hover: "#98a9e3ff",
+            active: "#424a6fff"
+        },
+        "Video Work": {
+            base: "#534368ff",
+            hover: "#977eb4ff",
+            active: "#2d1d36ff"
+        }
+    };
 
     const artworkData = [
         { year: 2022, type: "Illustration", count: 34 },
@@ -160,12 +182,20 @@
     const buttonsContainer = d3.select("#filter-buttons");
     let currentlySelectedType = null;
 
-    // In the button click event handler, modify it as follows:
     allTypes.forEach(type => {
         buttonsContainer.append("button")
             .attr("class", "bar-filter-button")
             .attr("data-type", type)
+            .style("background-color", buttonColors[type].base) // Set button base color
             .text(type)
+            .on("mouseover", function () {
+                d3.select(this).style("background-color", buttonColors[type].hover); // Set hover color
+            })
+            .on("mouseout", function () {
+                if (!d3.select(this).classed("active")) {
+                    d3.select(this).style("background-color", buttonColors[type].base); // Reset to base color
+                }
+            })
             .on("click", function () {
                 const typeClicked = d3.select(this).attr("data-type");
 
@@ -181,11 +211,12 @@
                     d3.select(this).classed("active", true);
                     currentlySelectedType = typeClicked; // Update selection
                     const filteredData = artworkData.filter(d => d.type === typeClicked);
+                    // Set the active color for the clicked button
+                    d3.select(this).style("background-color", buttonColors[type].active);
                     drawChart(filteredData, typeClicked);
                 }
             });
     });
-
 
     // Initial chart draw
     drawChart(artworkData, null);
