@@ -18,6 +18,7 @@
                         name: "2D animation",
                         children: [
                             { name: "The Most Localized Fluffy Weather Forecast" },
+                            { name: "A Farewell Too Early" },
                             { name: "Software: CLIP Studio Paint" }
                         ]
                     }

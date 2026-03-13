@@ -9,12 +9,13 @@
             { id: "C4", name: "Fundamentals of Animation", type: "course" },
             { id: "C5", name: "Introduction to Photography", type: "course" },
             { id: "C6", name: "Digital Photography", type: "course" },
-            { id: "C7", name: "Spec. Topics in Creative Media", type: "course" },
+            { id: "C7", name: "Information Visualization", type: "course" },
             { id: "C8", name: "Media Computing", type: "course" },
             { id: "C9", name: "Creative Coding", type: "course" },
             { id: "C10", name: "Creative Media Studio I", type: "course" },
             { id: "C11", name: "Creative Media Studio II", type: "course" },
             { id: "C12", name: "Narrative Strg & Aesthetics", type: "course" },
+            { id: "C13", name: "2D Animation - Intermediate", type: "course" },
 
             // Artworks (type: 'artwork') - These can have custom radii
             // Added 'radius' property to artwork nodes for customizable sizes
@@ -25,6 +26,7 @@
             { id: "A5", name: "Game Concept: Last Dawn", type: "artwork", radius: 25 },
             { id: "A6", name: "Digital Illustrations", type: "artwork", radius: 20 }, 
             { id: "A7", name: "Processing.org MV: Infinity Heaven", type: "artwork", radius: 20 },
+            { id: "A8", name: "Short Animation: A Farewell Too Early", type: "artwork", radius: 45 }
         ],
         links: [
             { source: "A1", target: "C1" },
@@ -51,6 +53,9 @@
             { source: "A7", target: "C1" },
             { source: "A7", target: "C8" },
             { source: "A7", target: "C9" },
+            { source: "A8", target: "C13" },
+            { source: "A8", target: "C4" },
+            { source: "A8", target: "C5" },
         ]
     };
 
@@ -62,12 +67,13 @@
         "C4": "<strong>Fundamentals of Animation:</strong> Covers the basic principles and techniques of animation, including traditional, stop-motion, and digital methods.",
         "C5": "<strong>Introduction to Photography:</strong> An introductory course to photographic principles, composition, lighting, and basic camera operation.",
         "C6": "<strong>Digital Photography:</strong> Builds upon introductory concepts, focusing on digital image capture, editing, and post-processing techniques.",
-        "C7": "<strong>Spec. Topics in Creative Media VI:</strong> A course that covers data visualization in forms of website design.",
+        "C7": "<strong>Information Visualisation:</strong> A course that covers data visualization in forms of website design.",
         "C8": "<strong>Media Computing:</strong> Introduces computational concepts relevant to media creation, including programming for interactive art and data visualization.",
         "C9": "<strong>Creative Coding:</strong> Focuses on using programming language Processing.org to create generative art, interactive installations, and visual effects.",
         "C10": "<strong>Creative Media Studio I:</strong> The first part of a capstone studio series, where students develop and execute a significant creative media project.",
         "C11": "<strong>Creative Media Studio II:</strong> The second part of the capstone series, involving further development, refinement, and presentation of a major video project.",
         "C12": "<strong>Narrative Strg & Aesthetics:</strong> Examines storytelling structures and aesthetic principles across various media, from film to interactive experiences.",
+        "C13": "<strong>2D Animation - Intermediate:</strong> Advanced course of 2D animation, focusing more on emotion expression beyond fundamental skills.",
 
         "A1": "<strong>Stationery Tidying ASMR:</strong> An artwork exploring auditory sensory experiences through everyday sounds, specifically focused on the meticulous arrangement of stationery items.",
         "A2": "<strong>Personal Website:</strong> You are in the personal website! A digital portfolio showcasing various creative projects, built using web development technologies learned in media computing courses.",
@@ -75,7 +81,8 @@
         "A4": "<strong>Short film: Be my Digital Friend:</strong> A narrative short film exploring themes of online friendships and its effects in our digital age.",
         "A5": "<strong>Game Concept: Last Dawn:</strong> A conceptual design for a video game about our life choices facing the doomsday.",
         "A6": "<strong>Digital Illustrations:</strong> A collection of digital artworks created using various software, demonstrating skills in visual composition and digital painting.",
-        "A7": "<strong>Processing.org MV: Infinity Heaven:</strong> A generative music video created using Processing.org, featuring abstract visual patterns that react to an original music track."
+        "A7": "<strong>Processing.org MV: Infinity Heaven:</strong> A generative music video created using Processing.org, featuring abstract visual patterns that react to an original music track.",
+        "A8": "<strong>Short Animation: A Farewell Too Early:</strong> An animated short film created under specific constraints to explore emotional storytelling through animation."
     };
 
     // --- Global State Variables ---

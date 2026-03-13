@@ -11,7 +11,7 @@
             id: 'Portfolio',
             imageSrc: 'https://i.imgur.com/gBswTwK.jpeg',
             caption: 'Portfolio Website',
-            description: 'To my portfolio website showcasing my projects.',
+            description: 'Quick access to my works',
             url: 'https://christyyiu911.wixsite.com/christy-portfolio' // Added URL for navigation
         },
         {

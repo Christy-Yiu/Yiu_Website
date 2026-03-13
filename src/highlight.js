@@ -7,7 +7,7 @@
         { filename: 'image4.jpg', alt: 'Farewell, Spirits', title: 'Farewell, Spirits' },
         { filename: 'image5.jpg', alt: 'Be my digital friend', title: 'Be my digital friend' },
         { filename: 'image6.jpg', alt: 'weather forecast animation', title: 'The most Localized Fluffy Weather Forecast' },
-        { filename: 'image7.jpg', alt: 'white hole', title: 'White Hole Project' },
+        { filename: 'image7.jpg', alt: 'farewell', title: 'A Farewell Too Early' },
         { filename: 'image8.jpg', alt: 'mv', title: 'Interactive MV' },
         { filename: 'image9.jpg', alt: 'firedragon', title: 'Within the Fire Dragon' },
         { filename: 'image10.jpg', alt: 'soundwork', title: 'Stationery Tidying ASMR' }
