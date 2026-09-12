@@ -3,17 +3,17 @@
         {
             name: "Original Illustrations",
             folder: "1",
-            images: ["Blizzard2024.png", "Spirits2024.png", "Bonfire2024.jpg", "Heroes2024.jpg", "Blizzard2023.jpg", "devil.png", "ISP_Share.png"]
-        },
-        {
-            name: "Fanart Illustrations",
-            folder: "2",
-            images: ["Finii_14.png", "XiaoContest.png", "ScaraModern.png", "Neuvilette.jpg"]
+            images: ["Anathema.jpg","Blizzard2024.png", "Spirits2024.png", "Bonfire2024.jpg", "Heroes2024.jpg", "Blizzard2023.jpg"]
         },
         {
             name: "Misc. Illustrations",
+            folder: "2",
+            images: ["Finii_14.png", "Marin.png", "Tale_of_Takako.png", "emoticons.png"]
+        },
+        {
+            name: "IRL Projects",
             folder: "3",
-            images: ["Marin.png", "Tale_of_Takako.png", "emoticons.png"]
+            images: ["Finii_14.png", "Marin.png", "Tale_of_Takako.png", "emoticons.png"]
         },
         {
             name: "Photography",

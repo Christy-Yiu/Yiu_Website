@@ -1220,7 +1220,7 @@ footer a:hover {
     /* Use flexbox for layout */
     flex-wrap: wrap;
     /* Allow items to wrap to the next line */
-    justify-content: space-between;
+    justify-content: center;
     /* Distribute items evenly with space between them */
     box-sizing: border-box;
     /* Include padding in the element's total width and height */
@@ -1310,7 +1310,7 @@ footer a:hover {
 /* Caption Text Styling */
 .artwork-caption {
     color: white;
-    font-size: 1.2em;
+    font-size: 1.7em;
     /* Adjustable font size */
     font-weight: bold;
     text-align: center;
