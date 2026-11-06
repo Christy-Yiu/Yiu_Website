@@ -1484,3 +1484,742 @@ h1.right {
     align-items: left;
     justify-content: left;
 }
+
+.image-container {
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ==========================================================================
+   Graduation Thesis documentation pages (subpages/art_detail/GT)
+   Added for gt-1.html, gt-2.html and gt-3.html.
+   Everything below is new; the rules above are left untouched.
+   ========================================================================== */
+
+/* Page wrapper: reuses the white card of section.imageslide,
+   but aligns the documentation content to the left. */
+section.gt-page {
+    text-align: left;
+    padding: min(2.5em, 6%);
+}
+
+/* ---------- Hero ---------- */
+.gt-hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5em;
+    padding-bottom: 2em;
+    border-bottom: 1px solid #e3ebf5;
+    text-align: left;
+}
+
+.gt-hero-text {
+    flex: 1 1 20em;
+    min-width: 0;
+}
+
+.gt-eyebrow {
+    margin: 0 0 0.6em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.8em;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #5A88A1;
+}
+
+h1.gt-title {
+    margin: 0 0 0.35em;
+    font-size: clamp(2em, 5vw, 2.9em);
+    line-height: 1.1;
+    color: #213768;
+}
+
+.gt-subtitle {
+    margin: 0;
+    max-width: 32em;
+    font-size: 1.05em;
+    line-height: 1.65;
+    color: #4a5a6a;
+}
+
+.gt-hero-media {
+    flex: 0 1 20em;
+}
+
+.gt-hero-media img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 1.2em;
+    box-shadow: 0 10px 25px rgba(33, 55, 104, 0.18);
+}
+
+/* ---------- Section menu (Overview / Proposal / Process) ---------- */
+.gt-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+    gap: 1em;
+    margin: 2em 0 2.5em;
+}
+
+.gt-menu-link {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35em;
+    padding: 1.1em 3em 1.1em 1.3em;
+    border: 1px solid #d7e3f1;
+    border-radius: 0.9em;
+    background-color: #f6f9fd;
+    color: #213768;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease,
+        border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.gt-menu-link::after {
+    content: "\2192";
+    position: absolute;
+    top: 1em;
+    right: 1.2em;
+    font-size: 1.15em;
+    color: #5A88A1;
+}
+
+a.gt-menu-link:hover {
+    transform: translateY(-4px);
+    background-color: #fff;
+    border-color: #9fc0e0;
+    box-shadow: 0 10px 22px rgba(33, 55, 104, 0.16);
+}
+
+/* Current page: not a link, highlighted in the site's dark blue */
+.gt-menu-link.is-current {
+    background-color: #213768;
+    border-color: #213768;
+    color: #fff;
+    cursor: default;
+}
+
+.gt-menu-link.is-current::after {
+    content: "\25CF";
+    top: 1.35em;
+    font-size: 0.65em;
+    color: #9fc0e0;
+}
+
+.gt-menu-num {
+    font-family: Tahoma, sans-serif;
+    font-size: 0.72em;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    color: #5A88A1;
+}
+
+.gt-menu-label {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+.gt-menu-desc {
+    font-size: 0.85em;
+    line-height: 1.5;
+    color: #5c6b7a;
+}
+
+.gt-menu-link.is-current .gt-menu-num {
+    color: #9fc0e0;
+}
+
+.gt-menu-link.is-current .gt-menu-desc {
+    color: #d6e2f2;
+}
+
+/* ---------- Document body ---------- */
+.gt-section {
+    padding: 1.8em 0;
+    border-top: 1px solid #eef2f8;
+}
+
+.gt-section:first-child {
+    padding-top: 0;
+    border-top: none;
+}
+
+.gt-section h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+    margin: 0 0 0.8em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.45em;
+    font-weight: 600;
+    color: #213768;
+}
+
+.gt-section h2::before {
+    content: "";
+    display: inline-block;
+    width: 0.35em;
+    height: 1.1em;
+    border-radius: 2px;
+    background-color: #5A88A1;
+}
+
+.gt-section h3 {
+    margin: 1.4em 0 0.5em;
+    font-size: 1.05em;
+    color: #2e506a;
+}
+
+.gt-section p {
+    margin: 0 0 1em;
+    line-height: 1.75;
+    color: #3d4c59;
+}
+
+.gt-section p:last-child {
+    margin-bottom: 0;
+}
+
+ul.gt-list {
+    margin: 0 0 1em;
+    padding-left: 1.3em;
+    line-height: 1.8;
+    color: #3d4c59;
+}
+
+ul.gt-list li {
+    margin-bottom: 0.35em;
+}
+
+ul.gt-list li::marker {
+    color: #5A88A1;
+}
+
+/* ---------- Fact grid ---------- */
+.gt-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
+    gap: 1px;
+    margin: 1.2em 0 0;
+    overflow: hidden;
+    background-color: #e3ebf5;
+    border: 1px solid #e3ebf5;
+    border-radius: 0.9em;
+}
+
+.gt-meta {
+    padding: 1em 1.2em;
+    background-color: #fff;
+}
+
+.gt-meta-label {
+    display: block;
+    margin-bottom: 0.35em;
+    font-size: 0.72em;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #7b8ea1;
+}
+
+.gt-meta-value {
+    font-family: Tahoma, sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #213768;
+}
+
+/* ---------- Tags / keywords ---------- */
+ul.gt-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin: 1em 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.gt-tags li {
+    padding: 0.35em 0.9em;
+    border-radius: 999px;
+    background-color: #eaf2fb;
+    color: #2e506a;
+    font-size: 0.85em;
+}
+
+/* ---------- Figures & image placeholders ---------- */
+.gt-figure {
+    margin: 1.5em 0;
+    text-align: center;
+}
+
+.gt-figure img {
+    display: block;
+    width: 100%;
+    border-radius: 0.8em;
+    box-shadow: 0 4px 14px rgba(33, 55, 104, 0.12);
+}
+
+.gt-figure figcaption {
+    margin-top: 0.6em;
+    font-size: 0.85em;
+    line-height: 1.5;
+    color: #6b7a88;
+}
+
+.gt-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 12em;
+    padding: 1em;
+    border: 2px dashed #b9cfe5;
+    border-radius: 0.8em;
+    background-color: #f8fbff;
+    color: #7b8ea1;
+    font-size: 0.9em;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* ---------- Numbered process steps ---------- */
+ul.gt-steps {
+    display: grid;
+    gap: 1em;
+    margin: 1.2em 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.gt-step {
+    display: flex;
+    gap: 1.1em;
+    padding: 1.1em 1.3em;
+    background-color: #f7fafd;
+    border-left: 4px solid #5A88A1;
+    border-radius: 0 0.8em 0.8em 0;
+}
+
+.gt-step-num {
+    flex: 0 0 2.2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.15em;
+    line-height: 1.4;
+    font-weight: 600;
+    color: #5A88A1;
+}
+
+.gt-step h3 {
+    margin: 0 0 0.35em;
+    font-size: 1.05em;
+    color: #213768;
+}
+
+.gt-step p {
+    margin: 0;
+    font-size: 0.92em;
+    line-height: 1.65;
+    color: #4a5a6a;
+}
+
+/* ---------- Timeline table ---------- */
+table.gt-timeline {
+    width: 100%;
+    margin: 1em 0 0;
+    border-collapse: collapse;
+    font-size: 0.92em;
+}
+
+.gt-timeline th,
+.gt-timeline td {
+    padding: 0.75em 0.9em;
+    border-bottom: 1px solid #e6edf6;
+    text-align: left;
+    vertical-align: top;
+    line-height: 1.6;
+    color: #3d4c59;
+}
+
+.gt-timeline th {
+    background-color: #f4f8fd;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #213768;
+}
+
+.gt-timeline td:first-child {
+    white-space: nowrap;
+    font-weight: 600;
+    color: #5A88A1;
+}
+
+/* ---------- Footer navigation & notice ---------- */
+.gt-footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    margin-top: 2.2em;
+    padding-top: 1.4em;
+    border-top: 1px solid #e3ebf5;
+}
+
+.gt-back {
+    padding: 0.55em 1.1em;
+    border: 1px solid #c6d8ea;
+    border-radius: 999px;
+    color: #2e506a;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease, color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.gt-back:hover {
+    background-color: #213768;
+    border-color: #213768;
+    color: #fff;
+}
+
+.gt-hint {
+    margin: 2em 0 0;
+    padding: 0.9em 1.2em;
+    border: 1px dashed #c6d8ea;
+    border-radius: 0.7em;
+    background-color: #f4f8fd;
+    font-size: 0.85em;
+    line-height: 1.6;
+    color: #6b7a88;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+    section.gt-page {
+        padding: 1.2em;
+    }
+
+    .gt-hero {
+        gap: 1.5em;
+        padding-bottom: 1.5em;
+        text-align: center;
+    }
+
+    .gt-hero-media {
+        flex-basis: 100%;
+    }
+
+    .gt-subtitle {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .gt-menu {
+        grid-template-columns: 1fr;
+        gap: 0.8em;
+    }
+
+    .gt-menu-link {
+        padding: 1em 1.2em;
+    }
+
+    .gt-menu-link::after {
+        display: none;
+    }
+
+    .gt-step {
+        flex-direction: column;
+        gap: 0.4em;
+    }
+
+    .gt-footer-nav {
+        justify-content: flex-start;
+    }
+}
+
+/* ==========================================================================
+   Artwork slideshow (src/imageslide.js): slide / fade animation,
+   animated arrow buttons, counter and dots.
+   New rules only; the original .showart-* rules above are untouched.
+   ========================================================================== */
+
+/* The stage is created by the script around the original <img>. */
+.slideshow-stage {
+    position: relative;
+    width: 100%;
+    height: clamp(260px, 52vh, 500px);
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #eef3f9;
+    cursor: grab;
+    touch-action: pan-y;
+    /* horizontal drags belong to the slideshow, vertical ones to the page */
+    user-select: none;
+    -webkit-user-select: none;
+    outline: none;
+}
+
+.slideshow-stage:focus-visible {
+    box-shadow: 0 0 0 3px rgba(75, 107, 235, 0.35);
+}
+
+.slideshow-stage.is-dragging {
+    cursor: grabbing;
+}
+
+/* Both image layers are stacked; the script fades and slides them. */
+.slideshow-stage img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    object-fit: contain;
+    border-radius: 10px;
+    pointer-events: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    transition: transform 0.46s cubic-bezier(0.22, 0.61, 0.36, 1),
+        opacity 0.46s ease;
+    will-change: transform, opacity;
+}
+
+/* Always-visible controls with hover / press animation. */
+.slideshow-stage .showart-nav-button {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.9em;
+    height: 2.9em;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 50%;
+    background-color: rgba(75, 107, 235, 0.72);
+    color: #fff;
+    font-size: 1.1em;
+    line-height: 1;
+    opacity: 1;
+    transform: translateY(-50%);
+    box-shadow: 0 6px 16px rgba(20, 37, 80, 0.18);
+    transition: transform 0.25s ease, background-color 0.25s ease,
+        box-shadow 0.25s ease, opacity 0.25s ease;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    z-index: 4;
+}
+
+.slideshow-stage .showart-nav-button:hover:not(:disabled) {
+    background-color: rgba(51, 58, 119, 0.92);
+    transform: translateY(-50%) scale(1.12);
+    box-shadow: 0 10px 22px rgba(20, 37, 80, 0.3);
+}
+
+.slideshow-stage .showart-nav-button:active:not(:disabled) {
+    transform: translateY(-50%) scale(0.94);
+    box-shadow: 0 4px 10px rgba(20, 37, 80, 0.25);
+}
+
+.slideshow-stage .showart-nav-button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.slideshow-stage .showart-prev-button {
+    left: 14px;
+}
+
+.slideshow-stage .showart-next-button {
+    right: 14px;
+}
+
+/* "1 / 6" counter. */
+.showart-counter {
+    position: absolute;
+    right: 14px;
+    bottom: 12px;
+    padding: 0.25em 0.7em;
+    border-radius: 999px;
+    background-color: rgba(33, 55, 104, 0.62);
+    color: #fff;
+    font-size: 0.8em;
+    letter-spacing: 0.04em;
+    pointer-events: none;
+    z-index: 4;
+}
+
+/* Jump-to-image dots. */
+.showart-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.4em 0.75em;
+    border-radius: 999px;
+    background-color: rgba(255, 255, 255, 0.72);
+    transform: translateX(-50%);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    z-index: 4;
+}
+
+.showart-dot {
+    width: 0.6em;
+    height: 0.6em;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: #9db4cc;
+    cursor: pointer;
+    transition: transform 0.25s ease, background-color 0.25s ease,
+        width 0.25s ease;
+}
+
+.showart-dot:hover {
+    background-color: #5A88A1;
+    transform: scale(1.25);
+}
+
+.showart-dot.is-active {
+    width: 1.5em;
+    border-radius: 999px;
+    background-color: #213768;
+}
+
+@media (max-width: 768px) {
+    .slideshow-stage {
+        height: clamp(200px, 42vh, 340px);
+    }
+
+    .slideshow-stage .showart-nav-button {
+        width: 2.4em;
+        height: 2.4em;
+        font-size: 1em;
+    }
+
+    .showart-dots {
+        gap: 0.4em;
+        padding: 0.35em 0.6em;
+    }
+
+    .showart-counter {
+        font-size: 0.75em;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .slideshow-stage img,
+    .slideshow-stage .showart-nav-button,
+    .showart-dot {
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ==========================================================================
+   Link buttons: <a class="link-button" href="...">...</a>
+   Blue rounded rectangle that turns pale blue once the link has been
+   clicked (code.js adds .is-clicked; :visited covers later visits).
+   ========================================================================== */
+
+a.link-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    margin: 0.35em 0;
+    padding: 0.62em 1.2em;
+    border: 1px solid transparent;
+    border-radius: 0.6em;
+    background-color: #2e6bb0;
+    color: #ffffff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.95em;
+    letter-spacing: 0.01em;
+    line-height: 1.2;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(33, 55, 104, 0.18);
+    cursor: pointer;
+    transition: background-color 0.25s ease, color 0.25s ease,
+        border-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+/* little external-link arrow */
+a.link-button::after {
+    content: "\2197";
+    font-size: 0.95em;
+    line-height: 1;
+    transition: transform 0.2s ease;
+}
+
+a.link-button:hover {
+    background-color: #213768;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(33, 55, 104, 0.28);
+}
+
+a.link-button:hover::after {
+    transform: translate(2px, -2px);
+}
+
+a.link-button:active {
+    transform: translateY(0) scale(0.97);
+    box-shadow: 0 3px 8px rgba(33, 55, 104, 0.2);
+}
+
+a.link-button:focus-visible {
+    outline: 3px solid rgba(75, 107, 235, 0.45);
+    outline-offset: 2px;
+}
+
+/* already clicked / visited: pale blue, navy text, tick mark */
+a.link-button:visited,
+a.link-button.is-clicked {
+    background-color: #dce9f7;
+    border-color: #b9cfe5;
+    color: #213768;
+    box-shadow: none;
+}
+
+a.link-button.is-clicked::before {
+    content: "\2713";
+    font-size: 0.95em;
+    font-weight: 700;
+    line-height: 1;
+}
+
+a.link-button:visited:hover,
+a.link-button.is-clicked:hover {
+    background-color: #c9dcef;
+    color: #213768;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(33, 55, 104, 0.15);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    a.link-button {
+        transition-duration: 0.01ms !important;
+    }
+}

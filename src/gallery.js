@@ -42,7 +42,7 @@
         {
             id: 7,
             imageUrl: "./../images/gallery_thumbnails/thumb_gt.jpg",
-            caption: "Graduation Thesis",
+            caption: "Graduation Thesis (Under construction)",
             linkUrl: "./art_detail/GT/gt-1.html"
         }
     ];

@@ -3,7 +3,7 @@
 <head>
     <!-- ../ Redrirects to the primary folder-->
     <link href="../../../style.css" rel="stylesheet" />
-    <title>Christy Yiu</title>
+    <title>Graduation Thesis</title>
 </head>
 
 <body>
@@ -25,18 +25,142 @@
         </nav>
         <!-- Photo + self intro -->
     </header>
-    <section class="imageslide">
-        <h1>Journey to Memories</h1>
-        <br>
-        <div class="gallery_para">
-            <div>
-                <h1>page here is still under construction</h1>
-                <p>Pls come back later.
-                    <br>
 
+    <section class="imageslide gt-page">
+
+        <!-- Hero: thesis title + key visual -->
+        <div class="gt-hero">
+            <div class="gt-hero-text">
+                <p class="gt-eyebrow">Graduation Thesis &middot; Documentation</p>
+                <h1 class="gt-title">Journey to Memories</h1>
+                <p class="gt-subtitle">
+                    2D animated short film, Western Fantasy x Anime artstyle
+                </p>
+            </div>
+            <div class="gt-hero-media">
+                <!-- Replace with your own key visual if you like -->
+                <img src="../../../images/gallery_thumbnails/thumb_gt.jpg" alt="Key visual of Journey to Memories">
             </div>
         </div>
-       
+
+        <!-- Section menu: this overview page, plus links to gt-2 and gt-3 -->
+        <nav class="gt-menu" aria-label="Thesis documentation sections">
+
+            <span class="gt-menu-link is-current" aria-current="page">
+                <span class="gt-menu-num">01</span>
+                <span class="gt-menu-label">Overview</span>
+                <span class="gt-menu-desc">Quick links and documents</span>
+            </span>
+
+            <a class="gt-menu-link" href="gt-2.html" onclick="transitionToPage('gt-2.html'); return false;">
+                <span class="gt-menu-num">02</span>
+                <span class="gt-menu-label">Proposal</span>
+                <span class="gt-menu-desc">Drafts and animatics</span>
+            </a>
+
+            <a class="gt-menu-link" href="gt-3.html" onclick="transitionToPage('gt-3.html'); return false;">
+                <span class="gt-menu-num">03</span>
+                <span class="gt-menu-label">Process</span>
+                <span class="gt-menu-desc">Making of the work</span>
+            </a>
+
+        </nav>
+
+        <div class="gt-body">
+
+            <!-- EDIT: Abstract -->
+            <div class="gt-section">
+                <h2>Abstract</h2>
+                <p>
+This proposed 2D animation explores loss, guilt, courage, and legacy within a fantasy world threatened by recurring demon raids. 
+The story is about Ann, a young woman who flees her island home during a raid, while a brave warrior remains behind to defend the city. 
+After the raid, Ann returned to the island and searched for the man, but later found him dead. Overcome by grief and guilt, she reached his grave and reflected on their shared memories. 
+Her mourning becomes a turning point as she accepts his insignia and inherits his sense of duty. Years later, Ann emerges as a powerful protector who saves a child from danger, carrying on the warrior's legacy. 
+The animation would be in a Japanese anime-inspired art style with a Western fantasy setting.
+                </p>
+            </div>
+
+            <!-- EDIT: Project facts -->
+            <div class="gt-section">
+                <h2>Project at a glance</h2>
+                <div class="gt-meta-grid">
+                    <div class="gt-meta">
+                        <span class="gt-meta-label">Student</span>
+                        <span class="gt-meta-value">Yiu Tsz Ching, Christy</span>
+                    </div>
+                    <div class="gt-meta">
+                        <span class="gt-meta-label">Programme</span>
+                        <span class="gt-meta-value">BACM</span>
+                    </div>
+                    <div class="gt-meta">
+                        <span class="gt-meta-label">Supervisor</span>
+                        <span class="gt-meta-value">Mr. LEUNG Hiu Ming Eddie</span>
+                    </div>
+                    <div class="gt-meta">
+                        <span class="gt-meta-label">Year</span>
+                        <span class="gt-meta-value">2026/27</span>
+                    </div>
+                    <div class="gt-meta">
+                        <span class="gt-meta-label">Format</span>
+                        <span class="gt-meta-value">2D Animation</span>
+                    </div>
+                    <div class="gt-meta">
+                        <span class="gt-meta-label">Tools</span>
+                        <span class="gt-meta-value">CLIP Studio Paint, Adobe Premiere Pro, After Effects</span>
+                    </div>
+                </div>
+
+                <h3>Keywords</h3>
+                <ul class="gt-tags">
+                    <li>Memory</li>
+                    <li>Nostalgia</li>
+                    <li>Interactive storytelling</li>
+                    <li>Illustration</li>
+                    <li>Web design</li>
+                </ul>
+            </div>
+
+            <!-- EDIT: Research focus -->
+            <div class="gt-section">
+                <h2>Research focus</h2>
+                <p>
+                    Use this section to state the central question of the thesis and the two or three
+                    smaller questions that support it.
+                </p>
+                <ul class="gt-list">
+                    <li>How can everyday memories be translated into a visual and interactive form?</li>
+                    <li>Which design choices make an audience feel personally involved with someone
+                        else&rsquo;s memories?</li>
+                    <li>How does the process of making change the way the maker remembers?</li>
+                </ul>
+            </div>
+
+            <!-- EDIT: Guide to the documentation -->
+            <div class="gt-section">
+                <h2>How to read this documentation</h2>
+                <p>
+                    The thesis is documented in three parts. This overview page introduces the project.
+                    The <strong>Proposal</strong> page covers the research background, question,
+                    objectives, methodology and timeline. The <strong>Process</strong> page follows the
+                    making of the work: experiments, iterations, materials and reflection.
+                </p>
+            </div>
+
+            <!-- Draft notice: delete this line once the text above is your own -->
+            <p class="gt-hint">
+                Draft content &mdash; the paragraphs above are sample text written to show the layout.
+                Replace them with your own abstract, facts and research questions; images can be added by
+                reusing the <code>.gt-figure</code> block found on the Process page.
+            </p>
+
+            <div class="gt-footer-nav">
+                <a class="gt-back" href="../../gallery.html"
+                    onclick="transitionToPage('../../gallery.html'); return false;">&larr; Back to Gallery</a>
+                <a class="gt-back" href="gt-2.html"
+                    onclick="transitionToPage('gt-2.html'); return false;">Next: Proposal &rarr;</a>
+            </div>
+
+        </div>
     </section>
 
 

@@ -1,0 +1,251 @@
+<html>
+
+<head>
+    <!-- ../ Redrirects to the primary folder-->
+    <link href="../../../style.css" rel="stylesheet" />
+    <title>Christy Yiu | Graduation Thesis &mdash; Proposal</title>
+</head>
+
+<body>
+
+    <!-- <h1>Welcome</h1> -->
+    <header>
+        <nav id="nav">
+            <!-- Navigation bar -->
+            <ul>
+                <p class="art-name">Graduation Thesis</p>
+
+                <span id="homepage" class="subpage" onclick="transitionToPage('../../../index.html')">Home</span>
+                <span id="About" class="subpage" onclick="transitionToPage('../../my-work.html')">About me</span>
+                <span id="backgallery" class="subpage" onclick="transitionToPage('../../gallery.html')">Back to
+                    Gallery</span>
+
+
+            </ul>
+        </nav>
+        <!-- Photo + self intro -->
+    </header>
+
+    <section class="imageslide gt-page">
+
+        <!-- Hero for the proposal page -->
+        <div class="gt-hero">
+            <div class="gt-hero-text">
+                <p class="gt-eyebrow">Graduation Thesis &middot; Documentation</p>
+                <h1 class="gt-title">Proposal</h1>
+                <p class="gt-subtitle">
+                    The starting point of the thesis: the background that led to the idea, the question it
+                    asks, the plan for answering it, and the schedule it was made to.
+                </p>
+            </div>
+            <div class="gt-hero-media">
+                <img src="../../../images/gallery_thumbnails/thumb_gt.jpg" alt="Journey to Memories key visual">
+            </div>
+        </div>
+
+        <!-- Same section menu on every GT page; current page is not a link -->
+        <nav class="gt-menu" aria-label="Thesis documentation sections">
+
+            <a class="gt-menu-link" href="gt-1.html" onclick="transitionToPage('gt-1.html'); return false;">
+                <span class="gt-menu-num">01</span>
+                <span class="gt-menu-label">Overview</span>
+                <span class="gt-menu-desc">Quick links and documents</span>
+            </a>
+
+            <span class="gt-menu-link is-current" aria-current="page">
+                <span class="gt-menu-num">02</span>
+                <span class="gt-menu-label">Proposal</span>
+                <span class="gt-menu-desc">Drafts and animatics</span>
+            </span>
+
+            <a class="gt-menu-link" href="gt-3.html" onclick="transitionToPage('gt-3.html'); return false;">
+                <span class="gt-menu-num">03</span>
+                <span class="gt-menu-label">Process</span>
+                <span class="gt-menu-desc">Making of the work: experiments and iteration.</span>
+            </a>
+
+        </nav>
+
+        <div class="gt-body">
+
+            <!-- EDIT: Background -->
+            <div class="gt-section">
+                <h2>Background</h2>
+                <p>
+                    Explain the context that made you start this project: personal experience, an
+                    observation, or existing works and research that you found interesting. Keep it short
+                    and specific &mdash; one or two paragraphs is enough.
+                </p>
+                <p>
+                    Memories of places are often tied to small, ordinary details &mdash; a street corner,
+                    a sound, the light at a certain hour. When those places change, the memories that
+                    belong to them become harder to hold on to.
+                </p>
+            </div>
+
+            <!-- EDIT: Research question -->
+            <div class="gt-section">
+                <h2>Research question</h2>
+                <p>
+                    State the main question of the thesis in one sentence, then the sub-questions.
+                </p>
+                <ul class="gt-list">
+                    <li>How can personal memories of a place be documented and re-experienced through an
+                        interactive visual work?</li>
+                    <li>What role does interaction play in making an audience care about someone
+                        else&rsquo;s memory?</li>
+                    <li>How can illustration and web technologies be combined so that the technology does
+                        not overshadow the story?</li>
+                </ul>
+            </div>
+
+            <!-- EDIT: Objectives -->
+            <div class="gt-section">
+                <h2>Objectives</h2>
+                <ul class="gt-list">
+                    <li>Collect and organise personal memory material (writing, photographs, drawings).</li>
+                    <li>Design a visual language that can hold both detail and atmosphere.</li>
+                    <li>Build an interactive experience that guides the audience through the memories.</li>
+                    <li>Evaluate the work with a small group of viewers and refine it.</li>
+                </ul>
+            </div>
+
+            <!-- EDIT: Methodology -->
+            <div class="gt-section">
+                <h2>Methodology</h2>
+                <p>
+                    Describe how the work was researched and made. The four stages below are a common
+                    structure for a practice-based thesis &mdash; rename or replace them to fit your own
+                    approach.
+                </p>
+                <ul class="gt-steps">
+                    <li class="gt-step">
+                        <span class="gt-step-num">01</span>
+                        <div>
+                            <h3>Research</h3>
+                            <p>Reading on memory and place, gathering references, and looking at existing
+                                interactive and narrative works.</p>
+                        </div>
+                    </li>
+                    <li class="gt-step">
+                        <span class="gt-step-num">02</span>
+                        <div>
+                            <h3>Material collection</h3>
+                            <p>Collecting personal material &mdash; notes, photographs, sketches &mdash;
+                                and sorting it into themes that could become sections of the work.</p>
+                        </div>
+                    </li>
+                    <li class="gt-step">
+                        <span class="gt-step-num">03</span>
+                        <div>
+                            <h3>Design &amp; prototyping</h3>
+                            <p>Sketching the visual system, then building small interactive prototypes and
+                                testing how they feel to use.</p>
+                        </div>
+                    </li>
+                    <li class="gt-step">
+                        <span class="gt-step-num">04</span>
+                        <div>
+                            <h3>Production &amp; evaluation</h3>
+                            <p>Producing the final artwork and interface, then reviewing it with viewers and
+                                documenting the response.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- EDIT: Timeline -->
+            <div class="gt-section">
+                <h2>Timeline</h2>
+                <p>
+                    Replace the weeks and tasks below with your own schedule.
+                </p>
+                <table class="gt-timeline">
+                    <thead>
+                        <tr>
+                            <th scope="col">Period</th>
+                            <th scope="col">Task</th>
+                            <th scope="col">Output</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Week 1&ndash;3</td>
+                            <td>Research and reference gathering</td>
+                            <td>Research notes, moodboard</td>
+                        </tr>
+                        <tr>
+                            <td>Week 4&ndash;6</td>
+                            <td>Concept development and proposal writing</td>
+                            <td>Proposal document</td>
+                        </tr>
+                        <tr>
+                            <td>Week 7&ndash;10</td>
+                            <td>Visual design and prototyping</td>
+                            <td>Style frames, first prototype</td>
+                        </tr>
+                        <tr>
+                            <td>Week 11&ndash;14</td>
+                            <td>Production of the final work</td>
+                            <td>Finished interactive piece</td>
+                        </tr>
+                        <tr>
+                            <td>Week 15&ndash;16</td>
+                            <td>Evaluation, documentation and presentation</td>
+                            <td>Thesis document, this website</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- EDIT: Expected outcome -->
+            <div class="gt-section">
+                <h2>Expected outcome</h2>
+                <p>
+                    Describe what the final deliverable is and what a viewer should be able to do with it.
+                    Mention any supporting materials that are part of the submission.
+                </p>
+            </div>
+
+            <!-- EDIT: References -->
+            <div class="gt-section">
+                <h2>References</h2>
+                <ul class="gt-list">
+                    <li>Author, A. (Year). <em>Title of the book or article</em>. Publisher.</li>
+                    <li>Author, B. (Year). Title of the online source. Retrieved from URL.</li>
+                </ul>
+            </div>
+
+            <!-- Draft notice: delete this line once the text above is your own -->
+            <p class="gt-hint">
+                Draft content &mdash; this page is a working structure for the proposal. Replace the
+                headings, sample questions, schedule and references with the real ones.
+            </p>
+
+            <div class="gt-footer-nav">
+                <a class="gt-back" href="gt-1.html"
+                    onclick="transitionToPage('gt-1.html'); return false;">&larr; Overview</a>
+                <a class="gt-back" href="gt-3.html"
+                    onclick="transitionToPage('gt-3.html'); return false;">Next: Process &rarr;</a>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <script src="../../../code.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="../../../src/imageslide.js"></script>
+
+
+
+    <footer>
+        Yiu Tsz Ching, Christy<br>
+        Email:<a href="mailto:christyyiu911@gmail.com">chrisyyiu911@gmail.com</a><br>
+        <a href="#nav">Back to top</a>
+    </footer>
+</body>
+
+</html>
